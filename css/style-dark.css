@@ -1,9 +1,9 @@
-/* MASTER DARK ORANGE THEME 
-   Consolidated for performance and visual consistency.
+/* CONSOLIDATED DARK ORANGE THEME 
+   Targeting: Midnight Background with Vibrant Orange Accents
 */
 
 :root {
-  --bg-dark: #0b0e14;
+  --bg-main: #0b0e14;
   --bg-card: #141824;
   --text-main: #e6e8ee;
   --text-muted: #a5abc4;
@@ -11,15 +11,22 @@
   --brand-orange-grad: linear-gradient(135deg, #f55c15 0%, #c53b00 100%);
 }
 
-/* 1. GLOBAL RESET: Force dark background everywhere */
+/* 1. GLOBAL OVERRIDES - Fixes light sections and invisible text */
 html, body, section, .page-wrapper, .main-footer {
-  background-color: var(--bg-dark) !important;
-  background-image: none !important; /* Removes the light patterned background */
+  background-color: var(--bg-main) !important;
+  background-image: none !important; /* Removes light patterned backgrounds */
   color: var(--text-main) !important;
   font-family: 'Inter', sans-serif !important;
 }
 
-/* 2. TEXT VISIBILITY: Fixes white-on-white headers */
+/* 2. HEADER & NAVIGATION */
+.main-header, .sticky-header {
+  background: rgba(11, 14, 20, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* 3. TEXT VISIBILITY - Fixes white-on-white headers */
 h1, h2, h3, h4, h5, h6, 
 .sec-title h2, 
 .title-box h2,
@@ -30,9 +37,10 @@ h1, h2, h3, h4, h5, h6,
 
 p, .text-content, .list-style-one li {
   color: var(--text-muted) !important;
+  line-height: 1.8 !important;
 }
 
-/* 3. ORANGE ACCENTS (Fixes the orange arrows and lines) */
+/* 4. ORANGE ACCENTS & LISTS */
 .sec-title .title, .accent-title {
   color: var(--brand-orange) !important;
   text-transform: uppercase;
@@ -50,7 +58,7 @@ p, .text-content, .list-style-one li {
   height: 2px !important;
 }
 
-/* 4. CARDS & SERVICE BLOCKS (Matches your Website Design cards) */
+/* 5. CARDS & SERVICE BLOCKS  */
 .inner-box, .service-block-four .inner-box {
   background: linear-gradient(180deg, var(--bg-card), #1b2032) !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
@@ -64,19 +72,18 @@ p, .text-content, .list-style-one li {
   transform: translateY(-5px);
 }
 
-/* 5. BUTTONS */
+/* 6. BUTTONS  */
 .theme-btn, .btn-style-one {
   background: var(--brand-orange-grad) !important;
-  color: #000000 !important; /* Black text for best readability on orange */
+  color: #000000 !important; /* Black text for best contrast on orange */
   border-radius: 50px !important;
   font-weight: 700 !important;
   border: none !important;
   padding: 14px 34px !important;
+  display: inline-block;
+  transition: 0.3s;
 }
 
-/* 6. HEADER & NAVIGATION */
-.main-header, .sticky-header {
-  background: rgba(11, 14, 20, 0.95) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(8px);
+.theme-btn:hover {
+  box-shadow: 0 10px 25px rgba(245, 92, 21, 0.4) !important;
 }
