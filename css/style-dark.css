@@ -1,103 +1,92 @@
-/* MASTER DARK ORANGE OVERRIDE 
-   Targeting: Total Dark Immersion with High-Contrast Orange Accents
+/* MASTER OVERRIDE for ibex WebTech 
+   Fixes: Invisible headers, light patterns, and cramped spacing.
 */
 
 :root {
   --bg-dark: #0b0e14;
   --bg-card: #141824;
   --brand-orange: #f55c15;
-  --brand-orange-grad: linear-gradient(135deg, #f55c15 0%, #c53b00 100%);
   --text-main: #e6e8ee;
-  --text-dim: #a5abc4;
+  --text-muted: #a5abc4;
 }
 
-/* 1. GLOBAL BACKGROUND RESET - Forces out the light patterns */
-html, body, section, div[class*="section"], .page-wrapper, .main-footer {
+/* 1. FORCE THE CANVAS DARK */
+/* Suppress the light patterns found in index.html (bg-pattern-13, bg-pattern-6) */
+html, body, .page-wrapper, section, footer, .bg-pattern-13, .bg-pattern-6 {
   background-color: var(--bg-dark) !important;
-  background-image: none !important; /* This kills the light gray pattern */
+  background-image: none !important;
   color: var(--text-main) !important;
-  font-family: 'Inter', sans-serif !important;
 }
 
-/* 2. TEXT VISIBILITY - Fixes the invisible headers */
+/* 2. FIX INVISIBLE HEADERS */
+/* Targets .sec-title and h2 tags specifically used in your index.html */
 h1, h2, h3, h4, h5, h6, 
 .sec-title h2, 
-.title-box h2,
-[class*="title"] h2 {
+.why-choose-us-three .sec-title h2,
+.services-section-four .sec-title h2 {
   color: #ffffff !important;
   font-weight: 700 !important;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  opacity: 1 !important;
 }
 
-p, .text-content, .list-style-one li {
-  color: var(--text-dim) !important;
+.sec-title .title, .sub-title {
+  color: var(--brand-orange) !important;
+  font-weight: 600;
+}
+
+/* 3. WHY CHOOSE SECTION FIXES (image_78d398.png) */
+.why-choose-us-three .text, 
+.list-style-two li {
+  color: var(--text-muted) !important;
   line-height: 1.8 !important;
 }
 
-/* 3. THE ORANGE BANNER FIX - Improves legibility and spacing */
-.cta-section, 
-div[style*="background-color: orange"], 
-div[style*="background-color: rgb(245, 92, 21)"] {
-  background: var(--brand-orange-grad) !important;
-  padding: 80px 40px !important; /* Adds professional breathing room */
-  border-radius: 20px !important;
-  margin: 50px auto !important;
-  max-width: 1200px;
-}
-
-.cta-section h2, 
-.cta-section h3, 
-.cta-section p,
-div[style*="background-color"] h2 {
-  color: #000000 !important; /* Sharp black text on orange */
-  font-weight: 800 !important;
-}
-
-/* 4. ICON & LIST ALIGNMENT - Styles the orange arrows */
-.list-style-one li {
-  position: relative;
-  padding-left: 35px !important;
-  margin-bottom: 15px !important;
-  list-style: none !important;
-}
-
-.list-style-one li::before, 
-.icon-list i, 
-[class*="fa-double-angle-right"] {
+.list-style-two li i {
   color: var(--brand-orange) !important;
-  position: absolute;
-  left: 0;
-  font-weight: bold;
+  margin-right: 10px;
 }
 
-/* 5. CARDS & SERVICE BLOCKS - Modern Dark UI [cite: 2] */
-.inner-box, .service-block, .contact-card {
-  background: linear-gradient(180deg, var(--bg-card), #1b2032) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  border-radius: 16px !important;
-  padding: 35px !important;
-  transition: all 0.3s ease !important;
+/* 4. ORANGE CTA BANNER FIX (image_793d2b.png) */
+/* Overrides the internal <style> block in index.html */
+.cta-section {
+  background: linear-gradient(135deg, #f55c15 0%, #c53b00 100%) !important;
+  padding: 80px 20px !important; 
+  border-radius: 20px !important;
+  margin: 60px 0 !important;
 }
 
-.inner-box:hover {
+.cta-section h2 {
+  color: #000000 !important; /* Sharp contrast for readability */
+  font-size: 2.5rem !important;
+}
+
+.cta-section p {
+  color: rgba(0,0,0,0.8) !important;
+}
+
+/* 5. SERVICE BLOCKS (image_78d7f4.png) */
+.service-block-four .inner-box {
+  background: var(--bg-card) !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  padding: 40px 30px !important;
+}
+
+.service-block-four .inner-box:hover {
   border-color: var(--brand-orange) !important;
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important;
 }
 
-/* 6. BUTTONS [cite: 2] */
-.theme-btn, .btn-style-one {
-  background: var(--brand-orange-grad) !important;
-  color: #000000 !important;
-  border-radius: 50px !important;
-  padding: 16px 40px !important;
-  font-weight: 700 !important;
-  border: none !important;
-  text-transform: uppercase;
+/* 6. STATS BAR */
+.stats-bar {
+  background: #07090e !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-/* 7. HEADER & NAVIGATION [cite: 2] */
-.main-header, .sticky-header {
-  background: rgba(11, 14, 20, 0.98) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+/* 7. FOOTER FIX */
+.main-footer .widget-title {
+  color: #ffffff !important;
+}
+
+.main-footer hr {
+  border-top-color: var(--brand-orange) !important;
+  opacity: 1 !important;
 }
