@@ -1,5 +1,5 @@
-/* CONSOLIDATED DARK ORANGE THEME
-   Replaces style-dark.css to fix contrast, spacing, and invisible text issues.
+/* MASTER DARK ORANGE OVERRIDE 
+   Targeting: Total Dark Immersion with High-Contrast Orange Accents
 */
 
 :root {
@@ -11,84 +11,93 @@
   --text-dim: #a5abc4;
 }
 
-/* 1. GLOBAL OVERRIDES: Force dark theme and remove light patterns */
-html, body, section, .page-wrapper, .main-footer {
+/* 1. GLOBAL BACKGROUND RESET - Forces out the light patterns */
+html, body, section, div[class*="section"], .page-wrapper, .main-footer {
   background-color: var(--bg-dark) !important;
-  background-image: none !important; /* Forces removal of light-colored backgrounds */
+  background-image: none !important; /* This kills the light gray pattern */
   color: var(--text-main) !important;
   font-family: 'Inter', sans-serif !important;
 }
 
-/* 2. TEXT VISIBILITY: Fixes white-on-white headers and body text */
+/* 2. TEXT VISIBILITY - Fixes the invisible headers */
 h1, h2, h3, h4, h5, h6, 
 .sec-title h2, 
 .title-box h2,
-.why-choose-section h2 {
+[class*="title"] h2 {
   color: #ffffff !important;
   font-weight: 700 !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-p, .text-content, .list-style-one li, .text-muted {
+p, .text-content, .list-style-one li {
   color: var(--text-dim) !important;
-  line-height: 1.8 !important; /* Improves legibility */
+  line-height: 1.8 !important;
 }
 
-/* 3. ORANGE ACCENTS: List icons and separators */
-.sec-title .title, .accent-title {
-  color: var(--brand-orange) !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+/* 3. THE ORANGE BANNER FIX - Improves legibility and spacing */
+.cta-section, 
+div[style*="background-color: orange"], 
+div[style*="background-color: rgb(245, 92, 21)"] {
+  background: var(--brand-orange-grad) !important;
+  padding: 80px 40px !important; /* Adds professional breathing room */
+  border-radius: 20px !important;
+  margin: 50px auto !important;
+  max-width: 1200px;
+}
+
+.cta-section h2, 
+.cta-section h3, 
+.cta-section p,
+div[style*="background-color"] h2 {
+  color: #000000 !important; /* Sharp black text on orange */
+  font-weight: 800 !important;
+}
+
+/* 4. ICON & LIST ALIGNMENT - Styles the orange arrows */
+.list-style-one li {
+  position: relative;
+  padding-left: 35px !important;
+  margin-bottom: 15px !important;
+  list-style: none !important;
 }
 
 .list-style-one li::before, 
 .icon-list i, 
-span[class*="icon-"] {
+[class*="fa-double-angle-right"] {
   color: var(--brand-orange) !important;
+  position: absolute;
+  left: 0;
   font-weight: bold;
 }
 
-.accent-divider, .separator, .sec-title .separator {
-  background-color: var(--brand-orange) !important;
-  border: none !important;
-  height: 2px !important;
-  width: 70px;
-  margin-bottom: 20px;
-}
-
-/* 4. SERVICE BLOCKS & CARDS: Professional Glassmorphism */
-.inner-box, .service-block-four .inner-box, .contact-card {
+/* 5. CARDS & SERVICE BLOCKS - Modern Dark UI [cite: 2] */
+.inner-box, .service-block, .contact-card {
   background: linear-gradient(180deg, var(--bg-card), #1b2032) !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 16px !important;
-  padding: 30px !important;
-  transition: transform 0.3s ease, border-color 0.3s ease !important;
+  padding: 35px !important;
+  transition: all 0.3s ease !important;
 }
 
 .inner-box:hover {
   border-color: var(--brand-orange) !important;
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important;
 }
 
-/* 5. BUTTON STYLING: High-contrast professional buttons */
+/* 6. BUTTONS [cite: 2] */
 .theme-btn, .btn-style-one {
   background: var(--brand-orange-grad) !important;
-  color: #000000 !important; /* Black text on orange for maximum contrast */
+  color: #000000 !important;
   border-radius: 50px !important;
-  padding: 15px 35px !important;
+  padding: 16px 40px !important;
   font-weight: 700 !important;
   border: none !important;
-  display: inline-block;
   text-transform: uppercase;
 }
 
-.theme-btn:hover {
-  box-shadow: 0 10px 25px rgba(245, 92, 21, 0.4) !important;
-  transform: translateY(-2px);
-}
-
-/* 6. NAVIGATION & HEADER */
+/* 7. HEADER & NAVIGATION [cite: 2] */
 .main-header, .sticky-header {
-  background: rgba(11, 14, 20, 0.95) !important;
+  background: rgba(11, 14, 20, 0.98) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(8px);
 }
