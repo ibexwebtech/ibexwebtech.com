@@ -1,32 +1,25 @@
-/* CONSOLIDATED DARK ORANGE THEME 
-   Targeting: Midnight Background with Vibrant Orange Accents
+/* CONSOLIDATED DARK ORANGE THEME
+   Replaces style-dark.css to fix contrast, spacing, and invisible text issues.
 */
 
 :root {
-  --bg-main: #0b0e14;
+  --bg-dark: #0b0e14;
   --bg-card: #141824;
-  --text-main: #e6e8ee;
-  --text-muted: #a5abc4;
   --brand-orange: #f55c15;
   --brand-orange-grad: linear-gradient(135deg, #f55c15 0%, #c53b00 100%);
+  --text-main: #e6e8ee;
+  --text-dim: #a5abc4;
 }
 
-/* 1. GLOBAL OVERRIDES - Fixes light sections and invisible text */
+/* 1. GLOBAL OVERRIDES: Force dark theme and remove light patterns */
 html, body, section, .page-wrapper, .main-footer {
-  background-color: var(--bg-main) !important;
-  background-image: none !important; /* Removes light patterned backgrounds */
+  background-color: var(--bg-dark) !important;
+  background-image: none !important; /* Forces removal of light-colored backgrounds */
   color: var(--text-main) !important;
   font-family: 'Inter', sans-serif !important;
 }
 
-/* 2. HEADER & NAVIGATION */
-.main-header, .sticky-header {
-  background: rgba(11, 14, 20, 0.95) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(8px);
-}
-
-/* 3. TEXT VISIBILITY - Fixes white-on-white headers */
+/* 2. TEXT VISIBILITY: Fixes white-on-white headers and body text */
 h1, h2, h3, h4, h5, h6, 
 .sec-title h2, 
 .title-box h2,
@@ -35,36 +28,40 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700 !important;
 }
 
-p, .text-content, .list-style-one li {
-  color: var(--text-muted) !important;
-  line-height: 1.8 !important;
+p, .text-content, .list-style-one li, .text-muted {
+  color: var(--text-dim) !important;
+  line-height: 1.8 !important; /* Improves legibility */
 }
 
-/* 4. ORANGE ACCENTS & LISTS */
+/* 3. ORANGE ACCENTS: List icons and separators */
 .sec-title .title, .accent-title {
   color: var(--brand-orange) !important;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .list-style-one li::before, 
 .icon-list i, 
-.orange-icon {
+span[class*="icon-"] {
   color: var(--brand-orange) !important;
+  font-weight: bold;
 }
 
-.accent-divider, .separator {
+.accent-divider, .separator, .sec-title .separator {
   background-color: var(--brand-orange) !important;
   border: none !important;
   height: 2px !important;
+  width: 70px;
+  margin-bottom: 20px;
 }
 
-/* 5. CARDS & SERVICE BLOCKS  */
-.inner-box, .service-block-four .inner-box {
+/* 4. SERVICE BLOCKS & CARDS: Professional Glassmorphism */
+.inner-box, .service-block-four .inner-box, .contact-card {
   background: linear-gradient(180deg, var(--bg-card), #1b2032) !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 16px !important;
   padding: 30px !important;
-  transition: all 0.3s ease !important;
+  transition: transform 0.3s ease, border-color 0.3s ease !important;
 }
 
 .inner-box:hover {
@@ -72,18 +69,26 @@ p, .text-content, .list-style-one li {
   transform: translateY(-5px);
 }
 
-/* 6. BUTTONS  */
+/* 5. BUTTON STYLING: High-contrast professional buttons */
 .theme-btn, .btn-style-one {
   background: var(--brand-orange-grad) !important;
-  color: #000000 !important; /* Black text for best contrast on orange */
+  color: #000000 !important; /* Black text on orange for maximum contrast */
   border-radius: 50px !important;
+  padding: 15px 35px !important;
   font-weight: 700 !important;
   border: none !important;
-  padding: 14px 34px !important;
   display: inline-block;
-  transition: 0.3s;
+  text-transform: uppercase;
 }
 
 .theme-btn:hover {
   box-shadow: 0 10px 25px rgba(245, 92, 21, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* 6. NAVIGATION & HEADER */
+.main-header, .sticky-header {
+  background: rgba(11, 14, 20, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px);
 }
