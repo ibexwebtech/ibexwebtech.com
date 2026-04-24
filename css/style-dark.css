@@ -1,9 +1,9 @@
-/* REFINED DARK-ORANGE THEME
-   Replaces original style-dark.css for better performance and visual polish.
+/* MASTER DARK ORANGE THEME
+   Replaces style-dark.css content to fix contrast and branding.
 */
 
 :root {
-  --bg-main: #0b0e14;
+  --bg-dark: #0b0e14;
   --bg-card: #141824;
   --brand-orange: #f55c15;
   --brand-orange-grad: linear-gradient(135deg, #f55c15 0%, #c53b00 100%);
@@ -11,52 +11,42 @@
   --text-dim: #a5abc4;
 }
 
-/* 1. LAYOUT & BACKGROUND */
-body, .page-wrapper {
-  background-color: var(--bg-main) !important;
+/* 1. GLOBAL BACKGROUND & TYPOGRAPHY  */
+html, body, section, .main-footer, .page-wrapper {
+  background-color: var(--bg-dark) !important;
   color: var(--text-main) !important;
-  font-family: 'Inter', sans-serif !important; [cite: 1]
+  font-family: 'Inter', sans-serif !important;
 }
 
-/* 2. THE ORANGE CTA SECTION (Fixes your screenshot layout) */
-.cta-section, 
-section[style*="background-color"],
-.why-choose-section {
-  background: var(--brand-orange-grad) !important; [cite: 1]
-  padding: 80px 20px !important; /* Fixes the "cramped" look */
-  border-radius: 20px !important;
-  margin: 40px auto !important;
-  text-align: center !important;
+/* 2. FIX FOR INVISIBLE HEADERS (The "Our Services" issue) */
+h1, h2, h3, h4, h5, h6, .sec-title h2, .title-box h2 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
 }
 
-.cta-section h2, 
-.cta-section h3, 
-.cta-section p {
-  color: #000000 !important; /* Better contrast than white on orange */
-  font-weight: 800 !important;
+.sec-title .title, .accent-title {
+  color: var(--brand-orange) !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* 3. ICON & LIST STYLING (The double arrows) */
-.list-style-one li {
-  color: var(--text-dim) !important;
-  margin-bottom: 15px !important;
-  padding-left: 30px !important;
-  position: relative !important;
-  line-height: 1.8 !important;
+/* 3. HERO & SLIDER FIXES */
+.banner-section, .main-slider {
+  background-color: var(--bg-dark) !important;
 }
 
-.list-style-one li::before, 
-.icon-list i {
-  color: var(--brand-orange) !important; [cite: 1]
-  font-weight: bold;
+/* 4. ORANGE ACCENTS & DIVIDERS */
+.accent-divider, .sec-title .separator, .title-box .separator {
+  background-color: var(--brand-orange) !important;
+  border-color: var(--brand-orange) !important;
 }
 
-/* 4. CARDS & PANELS */
-.inner-box, .service-block-four .inner-box, .contact-card {
-  background: linear-gradient(180deg, var(--bg-card), #1b2032) !important; [cite: 1]
-  border: 1px solid rgba(255,255,255,0.08) !important; [cite: 1]
-  border-radius: 16px !important; [cite: 1]
-  transition: all 0.3s ease;
+/* 5. CARDS & SERVICE BLOCKS  */
+.inner-box, .service-block, .service-block-four .inner-box {
+  background: var(--bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
 }
 
 .inner-box:hover {
@@ -64,22 +54,31 @@ section[style*="background-color"],
   transform: translateY(-5px);
 }
 
-/* 5. BUTTONS */
+/* 6. BUTTONS  */
 .theme-btn, .btn-style-one {
-  background: var(--brand-orange-grad) !important; [cite: 1]
-  color: #000000 !important; [cite: 1]
-  border-radius: 50px !important; [cite: 1]
-  padding: 15px 35px !important; [cite: 1]
-  font-weight: 700 !important; [cite: 1]
+  background: var(--brand-orange-grad) !important;
+  color: #000000 !important; /* High contrast black text on orange  */
+  border-radius: 50px !important;
+  padding: 15px 35px !important;
+  font-weight: 700 !important;
   border: none !important;
 }
 
-/* 6. TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff !important; [cite: 1]
+.theme-btn:hover {
+  box-shadow: 0 10px 25px rgba(245, 92, 21, 0.4) !important;
 }
 
-p {
-  color: var(--text-dim) !important; [cite: 1]
-  line-height: 1.8 !important;
+/* 7. NAVIGATION FIXES */
+.main-header, .sticky-header {
+  background: rgba(11, 14, 20, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.main-menu .navigation > li > a {
+  color: #ffffff !important;
+}
+
+/* 8. LISTS & ICONS  */
+.list-style-one li::before, .icon-list i, .cc-icon {
+  color: var(--brand-orange) !important;
 }
