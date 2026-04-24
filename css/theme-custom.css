@@ -1,133 +1,98 @@
-/* theme-custom.css
-   Dark mode theme with orange brand accent
-   Designed to be loaded AFTER style.css, style-dark.css, enhancements.css
+/* FINAL CUSTOM DARK ORANGE THEME
+   Designed to force-override light themes and fix layout spacing.
 */
 
 :root {
   --bg-main: #0b0e14;
   --bg-panel: #141824;
-  --bg-panel-2: #1b2032;
   --text-main: #e6e8ee;
   --text-muted: #a5abc4;
   --brand-orange: #f55c15;
-  --brand-orange-soft: rgba(245,92,21,.15);
-  --border-soft: rgba(255,255,255,.08);
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --brand-orange-grad: linear-gradient(135deg, #f55c15, #ff7a3d);
 }
 
-html { color-scheme: dark; }
-
-body {
-  background: var(--bg-main);
-  color: var(--text-main);
+/* 1. GLOBAL RESET: Force the dark background on everything */
+html, body, section, .page-wrapper, div[class*="content"] {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+  font-family: 'Inter', sans-serif !important;
 }
 
-/* Typography */
-body, button, input, textarea {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+/* 2. TEXT CONTRAST FIXES */
+h1, h2, h3, h4, h5, h6, strong {
+  color: #ffffff !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #fff;
-  letter-spacing: .2px;
+p, span, li {
+  color: var(--text-muted) !important;
+  line-height: 1.8 !important; /* Improves readability from your screenshot */
 }
 
-p { color: var(--text-muted); }
-
-/* Links */
-a { color: var(--brand-orange); }
-a:hover { color: #ff7a3d; }
-
-/* Header */
-.main-header {
-  background: linear-gradient(180deg, #0b0e14 0%, #0b0e14cc 100%);
-  border-bottom: 1px solid var(--border-soft);
+/* 3. THE ORANGE BANNER FIX (Based on your screenshot) */
+/* This targets the "Why choose Website Maintenance" section specifically */
+.cta-section, 
+section[style*="background-color"], 
+div[style*="background-color: rgb(245, 92, 21)"] {
+  background: var(--brand-orange-grad) !important;
+  padding: 60px 20px !important; /* Adds much needed breathing room */
+  margin: 40px 0 !important;
+  border-radius: 16px !important;
+  text-align: center !important;
 }
 
-.sticky-header {
-  backdrop-filter: blur(8px);
+.cta-section h2, .cta-section h3, .cta-section p {
+  color: #000000 !important; /* Makes text readable on the orange background */
 }
 
-/* Buttons */
-.theme-btn,
-.btn-style-one {
-  background: linear-gradient(135deg, var(--brand-orange), #ff7a3d);
-  color: #111;
-  border-radius: 999px;
-  padding: 14px 34px;
-  font-weight: 700;
-  border: none;
-  transition: transform .2s ease, box-shadow .2s ease;
+/* 4. ICON & LIST ALIGNMENT (The orange arrows) */
+.icon-list i, 
+.list-style-one li::before, 
+span[class*="icon"],
+[class*="fa-double-angle-right"] {
+  color: var(--brand-orange) !important;
+  font-size: 1.1em !important;
+  margin-right: 10px !important;
 }
 
-.theme-btn:hover,
-.btn-style-one:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(245,92,21,.35);
+.list-style-one li {
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: flex-start !important;
 }
 
-/* Cards / panels */
-.service-block-four .inner-box,
-.news-block .inner-box,
-.panel-dark,
-.contact-card {
-  background: linear-gradient(180deg, var(--bg-panel), var(--bg-panel-2));
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-lg);
+/* 5. IMAGE & GRAPHIC STYLING */
+/* Adds a subtle glow to the tech graphics in your screenshot */
+img[src*="image"], .image-box img {
+  border-radius: 12px !important;
+  box-shadow: 0 0 20px rgba(245, 92, 21, 0.1) !important;
 }
 
-/* Accent titles */
-.accent-title {
-  color: var(--brand-orange);
+/* 6. BUTTONS */
+.theme-btn, .btn-style-one {
+  background: var(--brand-orange-grad) !important;
+  color: #000 !important;
+  border: none !important;
+  padding: 15px 35px !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
 }
 
-.accent-divider {
-  border-top-color: var(--brand-orange);
+.theme-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 25px rgba(245, 92, 21, 0.4) !important;
 }
 
-/* Icons */
-.icon-list i,
-.cc-icon {
-  color: var(--brand-orange);
+/* 7. FORM FIELDS */
+input, textarea {
+  background: #141824 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  color: #fff !important;
+  padding: 12px !important;
 }
 
-/* Stats */
-.stats-bar { background: #080a10; }
-.stats-bar .stat-num { color: var(--brand-orange); }
-
-/* CTA */
-.cta-section {
-  background: radial-gradient(circle at top, #ff7a3d, #c53b00);
-}
-
-/* Footer */
-.main-footer {
-  background: #07090e;
-  border-top: 1px solid var(--border-soft);
-}
-
-.footer-hr {
-  border-top-color: var(--brand-orange);
-}
-
-/* Forms */
-input, textarea, select {
-  background: #0f1320;
-  color: var(--text-main);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-sm);
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--brand-orange);
-  box-shadow: 0 0 0 2px var(--brand-orange-soft);
-}
-
-/* Scroll to top */
-.scroll-to-top {
-  background: var(--brand-orange);
-  color: #111;
+input:focus {
+  border-color: var(--brand-orange) !important;
 }
