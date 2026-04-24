@@ -1,51 +1,61 @@
-/* MASTER DARK ORANGE THEME
-   Replaces style-dark.css content to fix contrast and branding.
+/* MASTER DARK ORANGE THEME 
+   Consolidated for performance and visual consistency.
 */
 
 :root {
   --bg-dark: #0b0e14;
   --bg-card: #141824;
+  --text-main: #e6e8ee;
+  --text-muted: #a5abc4;
   --brand-orange: #f55c15;
   --brand-orange-grad: linear-gradient(135deg, #f55c15 0%, #c53b00 100%);
-  --text-main: #e6e8ee;
-  --text-dim: #a5abc4;
 }
 
-/* 1. GLOBAL BACKGROUND & TYPOGRAPHY  */
-html, body, section, .main-footer, .page-wrapper {
+/* 1. GLOBAL RESET: Force dark background everywhere */
+html, body, section, .page-wrapper, .main-footer {
   background-color: var(--bg-dark) !important;
+  background-image: none !important; /* Removes the light patterned background */
   color: var(--text-main) !important;
   font-family: 'Inter', sans-serif !important;
 }
 
-/* 2. FIX FOR INVISIBLE HEADERS (The "Our Services" issue) */
-h1, h2, h3, h4, h5, h6, .sec-title h2, .title-box h2 {
+/* 2. TEXT VISIBILITY: Fixes white-on-white headers */
+h1, h2, h3, h4, h5, h6, 
+.sec-title h2, 
+.title-box h2,
+.why-choose-section h2 {
   color: #ffffff !important;
   font-weight: 700 !important;
 }
 
+p, .text-content, .list-style-one li {
+  color: var(--text-muted) !important;
+}
+
+/* 3. ORANGE ACCENTS (Fixes the orange arrows and lines) */
 .sec-title .title, .accent-title {
   color: var(--brand-orange) !important;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-/* 3. HERO & SLIDER FIXES */
-.banner-section, .main-slider {
-  background-color: var(--bg-dark) !important;
+.list-style-one li::before, 
+.icon-list i, 
+.orange-icon {
+  color: var(--brand-orange) !important;
 }
 
-/* 4. ORANGE ACCENTS & DIVIDERS */
-.accent-divider, .sec-title .separator, .title-box .separator {
+.accent-divider, .separator {
   background-color: var(--brand-orange) !important;
-  border-color: var(--brand-orange) !important;
+  border: none !important;
+  height: 2px !important;
 }
 
-/* 5. CARDS & SERVICE BLOCKS  */
-.inner-box, .service-block, .service-block-four .inner-box {
-  background: var(--bg-card) !important;
+/* 4. CARDS & SERVICE BLOCKS (Matches your Website Design cards) */
+.inner-box, .service-block-four .inner-box {
+  background: linear-gradient(180deg, var(--bg-card), #1b2032) !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 16px !important;
+  padding: 30px !important;
   transition: all 0.3s ease !important;
 }
 
@@ -54,31 +64,19 @@ h1, h2, h3, h4, h5, h6, .sec-title h2, .title-box h2 {
   transform: translateY(-5px);
 }
 
-/* 6. BUTTONS  */
+/* 5. BUTTONS */
 .theme-btn, .btn-style-one {
   background: var(--brand-orange-grad) !important;
-  color: #000000 !important; /* High contrast black text on orange  */
+  color: #000000 !important; /* Black text for best readability on orange */
   border-radius: 50px !important;
-  padding: 15px 35px !important;
   font-weight: 700 !important;
   border: none !important;
+  padding: 14px 34px !important;
 }
 
-.theme-btn:hover {
-  box-shadow: 0 10px 25px rgba(245, 92, 21, 0.4) !important;
-}
-
-/* 7. NAVIGATION FIXES */
+/* 6. HEADER & NAVIGATION */
 .main-header, .sticky-header {
   background: rgba(11, 14, 20, 0.95) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-.main-menu .navigation > li > a {
-  color: #ffffff !important;
-}
-
-/* 8. LISTS & ICONS  */
-.list-style-one li::before, .icon-list i, .cc-icon {
-  color: var(--brand-orange) !important;
+  backdrop-filter: blur(8px);
 }
