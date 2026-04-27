@@ -1,435 +1,1495 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 <meta charset="utf-8">
-	<title> Website Development Company in ohio,USA ,lima,greenville,troy,celina,muncie,vanwert, List Of Top Web Designing Companies in OHIO ,usa ,lima,greenville,troy,celina,muncie,vanwert, Best Web Designer & developers in OHIO ,usa,lima,greenville,troy,celina,muncie,vanwert, | website designing, Google Promotion, SEO service |Ibex Webtech </title>
+<title>ibex WebTech | Website Design & Development in Ohio, USA</title>
+<meta name="description" content="Ibex Webtech — 30+ expert Web Designers & Developers serving Ohio, Lima, Greenville, Troy, Celina, Muncie, Vanwert and beyond. Affordable, modern websites with SEO & Google Promotion.">
+<meta name="keywords" content="Website Development Company Ohio, Web Designer Ohio, Lima, Greenville, Troy, Celina, Muncie, Vanwert, SEO Service Ohio, Logo Design Ohio">
+<link rel="canonical" href="https://www.ibexwebtech.com/index.html" />
 
-	<meta name="description"
-		content="Ibex Webtech is a team of 30+ experts Web Designers & Developers working towards becoming the Website Designing Company in OHIO ,USA , lima,greenville,troy,celina,muncie,vanwert, We offer Best Website Designing Services in OHIO ,usa with low , affordable, effective cost website designing services to small to large business.We Ibex Webtech are Best/top SEO company, google Promotion service, web designing, digital marketing company">
-
-	<meta name="keywords"
-		content=" Website Development Company in OHIO ,USA , lima,greenville,troy,celina,muncie,vanwert, Top Web Design Companies in OHIO ,USA , Best Web Designer in OHIO ,USA , List of Website Designing Companies in OHIO ,USA , Website developers OHIO ,USA SEO, SEO Service, best SEO Service, top SEO Service, Search Engine Optimization service, Google promotion, famous SEO Service, google first page Promotion, social media service ,website maintainance ,best broucher designing, logo designing, website redesign, graphic designing, google promotion, social media promotion">
-		
-		<link rel="canonical" href="https://www.ibexwebtech.com/index.html" />
-    
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N62YTL54D"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-5N62YTL54D');
-</script>    
-    
-<meta charset="utf-8">
-<title>ibex WebTech</title>
+</script>
+
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/style-dark.css" rel="stylesheet">
 
+<!-- Google Fonts (loaded by style-dark.css @import, but duplicate for safety) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-<!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+/* =============================================
+   PAGE-LEVEL OVERRIDES & NEW SECTIONS
+   ============================================= */
+
+/* ---- NAV SPACER ---- */
+body { padding-top: 72px; }
+
+/* ---- HERO ---- */
+.hero {
+  min-height: calc(100vh - 72px);
+  background: #080a0f;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric background grid */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245,92,21,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,92,21,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 40%, transparent 100%);
+}
+
+/* Glow orb */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(ellipse, rgba(245,92,21,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(245,92,21,0.1);
+  border: 1px solid rgba(245,92,21,0.25);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f55c15;
+  margin-bottom: 28px;
+}
+
+.hero-eyebrow .dot {
+  width: 6px;
+  height: 6px;
+  background: #f55c15;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+  color: #f0f2f7;
+  margin-bottom: 28px;
+}
+
+.hero-title .accent {
+  color: #f55c15;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .accent::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f55c15, transparent);
+  border-radius: 2px;
+}
+
+.hero-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #b0b8d0;
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-hero {
+  background: linear-gradient(135deg, #f55c15, #c53b00);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 6px 24px rgba(245,92,21,0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-primary-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(245,92,21,0.5);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-secondary-hero {
+  color: #b0b8d0;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-hero:hover {
+  color: #f55c15;
+  text-decoration: none;
+}
+
+.btn-secondary-hero .arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-hero:hover .arrow {
+  border-color: #f55c15;
+  background: rgba(245,92,21,0.12);
+}
+
+/* Hero stats strip */
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-number {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #f0f2f7;
+  line-height: 1;
+}
+
+.stat-number span {
+  color: #f55c15;
+}
+
+.stat-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  color: #606880;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Hero visual right side */
+.hero-visual {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-card-stack {
+  position: relative;
+  padding: 30px;
+}
+
+.hero-card {
+  background: #12161f;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 30px;
+  right: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245,92,21,0.4), transparent);
+}
+
+.hero-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245,92,21,0.1);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f55c15;
+  margin-bottom: 18px;
+}
+
+.hero-card-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f0f2f7;
+  margin-bottom: 14px;
+}
+
+.service-pill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+.service-pill:hover {
+  border-color: rgba(245,92,21,0.2);
+  background: rgba(245,92,21,0.05);
+}
+
+.service-pill-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(245,92,21,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f55c15;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.service-pill-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #b0b8d0;
+  font-weight: 500;
+}
+
+.floating-badge {
+  position: absolute;
+  background: #12161f;
+  border: 1px solid rgba(245,92,21,0.25);
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  white-space: nowrap;
+}
+
+.floating-badge.top-right {
+  top: -10px;
+  right: 10px;
+  color: #f55c15;
+  animation: subtleFloat 4s ease-in-out infinite;
+}
+
+.floating-badge.bottom-left {
+  bottom: 10px;
+  left: 0px;
+  color: #b0b8d0;
+  animation: subtleFloat 4s ease-in-out infinite 2s;
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ---- SECTION: SERVICES ---- */
+.section-services {
+  padding: 110px 0;
+  background: #0d1017;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-services::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(245,92,21,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #f55c15;
+  margin-bottom: 14px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #f55c15;
+  border-radius: 2px;
+}
+
+.section-heading {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #f0f2f7;
+  margin-bottom: 16px;
+}
+
+.section-subhead {
+  font-size: 1rem;
+  color: #7a8299;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+@media (max-width: 991px) { .services-grid { grid-template-columns: 1fr; } }
+@media (min-width: 768px) and (max-width: 991px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.svc-card {
+  background: #12161f;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.svc-card:hover {
+  border-color: rgba(245,92,21,0.35);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 60px rgba(245,92,21,0.12);
+  text-decoration: none;
+}
+
+.svc-card-image {
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+}
+
+.svc-card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(transparent, #12161f);
+  pointer-events: none;
+}
+
+.svc-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.4s ease;
+  filter: brightness(0.8) saturate(0.9);
+}
+
+.svc-card:hover .svc-card-image img {
+  transform: scale(1.07);
+  filter: brightness(1) saturate(1.1);
+}
+
+.svc-card-body {
+  padding: 26px 28px 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.svc-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(245,92,21,0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #f55c15;
+  transition: all 0.3s ease;
+}
+
+.svc-card:hover .svc-card-icon {
+  background: rgba(245,92,21,0.2);
+  transform: scale(1.08);
+}
+
+.svc-card-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #f0f2f7;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.svc-card-text {
+  font-size: 0.875rem;
+  color: #7a8299;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.svc-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f55c15;
+  margin-top: 18px;
+  transition: gap 0.3s ease;
+}
+
+.svc-card:hover .svc-card-link {
+  gap: 10px;
+}
+
+/* ---- SECTION: WHY US ---- */
+.section-why {
+  padding: 110px 0;
+  background: #080a0f;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-why::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(245,92,21,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.why-checklist {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+@media (max-width: 576px) { .why-checklist { grid-template-columns: 1fr; } }
+
+.why-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.why-item:hover {
+  background: rgba(245,92,21,0.05);
+  border-color: rgba(245,92,21,0.15);
+}
+
+.why-item i {
+  color: #f55c15;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.why-item span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #b0b8d0;
+  font-weight: 400;
+}
+
+.why-image-wrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+
+.why-image-wrap img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.88);
+}
+
+.why-image-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(8,10,15,0.88);
+  border: 1px solid rgba(245,92,21,0.25);
+  border-radius: 14px;
+  padding: 16px 20px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.why-badge-number {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f55c15;
+  line-height: 1;
+}
+
+.why-badge-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  color: #b0b8d0;
+  line-height: 1.3;
+}
+
+/* ---- SECTION: LOCATIONS STRIP ---- */
+.section-locations {
+  padding: 48px 0;
+  background: #0d1017;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+}
+
+.locations-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #606880;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.locations-scroll {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.location-chip {
+  background: #12161f;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7a8299;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.location-chip:hover {
+  border-color: rgba(245,92,21,0.3);
+  color: #f55c15;
+  background: rgba(245,92,21,0.05);
+  text-decoration: none;
+}
+
+/* ---- SECTION: CTA BANNER ---- */
+.section-cta {
+  padding: 80px 0;
+  background: #0d1017;
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, #f55c15 0%, #c53b00 50%, #a02f00 100%);
+  border-radius: 28px;
+  padding: 64px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+.cta-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -60%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 50%;
+}
+
+.cta-banner-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.cta-text h2 {
+  font-family: 'Syne', sans-serif !important;
+  font-size: clamp(1.8rem, 3vw, 2.6rem) !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  margin-bottom: 10px !important;
+  letter-spacing: -0.02em !important;
+}
+
+.cta-text p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+.btn-cta-white {
+  background: #fff;
+  color: #f55c15;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px 36px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-cta-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.3);
+  color: #c53b00;
+  text-decoration: none;
+}
+
+/* ---- FOOTER (scoped) ---- */
+.ibex-footer {
+  background: #080a0f;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 72px;
+}
+
+.footer-brand p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #606880;
+  line-height: 1.7;
+  margin-top: 16px;
+  max-width: 260px;
+}
+
+.footer-heading {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f0f2f7;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f55c15;
+  display: inline-block;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links-list li {
+  padding: 8px 0;
+}
+
+.footer-links-list li a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #606880;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links-list li a:hover {
+  color: #f55c15;
+  padding-left: 4px;
+}
+
+.footer-links-list li a i {
+  color: #f55c15;
+  font-size: 0.7rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.footer-contact-item:last-child {
+  border-bottom: none;
+}
+
+.footer-contact-item .fc-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(245,92,21,0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f55c15;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-contact-item .fc-info {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.footer-contact-item .fc-info a,
+.footer-contact-item .fc-info span {
+  display: block;
+  font-size: 0.9rem;
+  color: #7a8299;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.footer-contact-item .fc-info a:hover {
+  color: #f55c15;
+}
+
+.footer-map-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  opacity: 0.85;
+  filter: grayscale(20%);
+  margin-top: 12px;
+}
+
+.footer-bottom-bar {
+  margin-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom-bar p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #404760;
+}
+
+.footer-bottom-bar a {
+  color: #f55c15;
+  text-decoration: none;
+}
+
+/* ---- PORTFOLIO PREVIEW (on home) ---- */
+.section-portfolio {
+  padding: 110px 0;
+  background: #0d1017;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+@media (max-width: 767px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+.portfolio-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #12161f;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: all 0.35s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(245,92,21,0.25);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.portfolio-card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.portfolio-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-card-image img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.portfolio-card-body {
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio-card-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f0f2f7;
+}
+
+.portfolio-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245,92,21,0.1);
+  border: 1px solid rgba(245,92,21,0.2);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f55c15;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.portfolio-card-link:hover {
+  background: rgba(245,92,21,0.2);
+  color: #f55c15;
+  text-decoration: none;
+}
+
+/* ---- SCROLL TO TOP ---- */
+.scroll-to-top {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background: #f55c15 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  box-shadow: 0 4px 20px rgba(245,92,21,0.4) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 28px rgba(245,92,21,0.55) !important;
+}
+
+/* ---- HIDDEN SEO LINKS ---- */
+.seo-links { position: absolute; opacity: 0; pointer-events: none; }
+</style>
 </head>
 
 <body>
 
-<div class="page-wrapper">
-	
-	<!-- Main Header-->
-	<header class="main-header header-style-four">
-		<!-- Main box -->
-		<div class="main-box">
-			<div class="logo-box">
-				<div class="logo"><a href="index.html"><img src="images/logo.png" alt="ibex WebTech" title="ibex WebTech" width="200"></a></div>
-			</div>
+<!-- ===== HEADER ===== -->
+<header class="main-header header-style-four">
+  <div class="main-box">
+    <div class="logo-box">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="ibex WebTech" title="ibex WebTech" width="180"></a>
+      </div>
+    </div>
 
-			<!--Nav Box-->
-			<div class="nav-outer">    
-				<nav class="nav main-menu">
-					<ul class="navigation">
-						<li><a href="index.html">Home</a></li>
+    <div class="nav-outer">
+      <nav class="nav main-menu">
+        <ul class="navigation">
+          <li class="current"><a href="index.html">Home</a></li>
+          <li class="dropdown"><a href="services.html">Services</a>
+            <ul>
+              <li><a href="website-design-development.html">Website Design & Development</a></li>
+              <li><a href="website-maintenance.html">Website Maintenance</a></li>
+              <li><a href="logo-design.html">Logo Design</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
 
-						<li class="dropdown"><a href="services.html">Services</a>
-								<ul>
-									<li><a href="website-design-development.html">Website Design & Development</a></li>
-									<li><a href="website-maintenance.html">Website Maintenance</a></li>
-									<li><a href="logo-design.html">Logo Design</a></li>
-								</ul>
-							</li>
+    <div class="outer-box">
+      <a href="contact-us.html" class="theme-btn btn-style-one dark-bg"><span class="btn-title">Get a Quote</span></a>
+      <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+    </div>
+  </div>
 
-						<li><a href="portfolio.html">Portfolio</a></li>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="menu-backdrop"></div>
+    <nav class="menu-box">
+      <div class="upper-box">
+        <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="ibex WebTech"></a></div>
+        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+      </div>
+      <ul class="navigation clearfix"></ul>
+      <ul class="contact-list-one">
+        <li>
+          <div class="contact-info-box">
+            <i class="icon lnr-icon-phone-handset"></i>
+            <span class="title">Call Now</span>
+            <a href="tel:+4192684673">(419) 268-4673</a>
+          </div>
+        </li>
+        <li>
+          <div class="contact-info-box">
+            <span class="icon lnr-icon-envelope1"></span>
+            <span class="title">Send Email</span>
+            <a href="mailto:contactus@ibexwebtech.com">contactus@ibexwebtech.com</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-						<li><a href="contact-us.html">Contact Us</a></li>
-					</ul>
-				</nav>
-				<!-- Main Menu End-->
-			</div>
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    <div class="auto-container">
+      <div class="inner-container">
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="ibex WebTech"></a></div>
+        <div class="nav-outer">
+          <nav class="main-menu">
+            <div class="navbar-collapse show collapse clearfix">
+              <ul class="navigation clearfix"></ul>
+            </div>
+          </nav>
+          <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End Header -->
 
-			<div class="outer-box">
 
-				<a href="contact-us.html" class="theme-btn btn-style-one dark-bg"><span class="btn-title">Get a quote</span></a>
-				
-				<!-- Mobile Nav toggler -->
-				<div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
-			</div>
-		</div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="row align-items-center">
 
-		<!-- Mobile Menu  -->
-		<div class="mobile-menu">
-			<div class="menu-backdrop"></div>
-		
-			<!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-			<nav class="menu-box">
-				<div class="upper-box">
-					<div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-					<div class="close-btn"><i class="icon fa fa-times"></i></div>
-				</div>
-		
-				<ul class="navigation clearfix">
-					<!--Keep This Empty / Menu will come through Javascript-->
-				</ul>
-				<ul class="contact-list-one">
-					<li>
-						<!-- Contact Info Box -->
-						<div class="contact-info-box">
-							<i class="icon lnr-icon-phone-handset"></i>
-							<span class="title">Call Now</span>
-							<a href="tel:+4192684673">(419) 268-4673</a>
-						</div>
-					</li>
-					<li>
-						<!-- Contact Info Box -->
-						<div class="contact-info-box">
-							<span class="icon lnr-icon-envelope1"></span>
-							<span class="title">Send Email</span>
-							<a href="mailto:contactus@ibexwebtech.com">contactus@ibexwebtech.com</a>
-						</div>
-					</li>
-				</ul>
-		
-		
-			</nav>
-		</div><!-- End Mobile Menu -->
+      <!-- Left: copy -->
+      <div class="col-lg-6 col-md-12 mb-5 mb-lg-0">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Ohio-Based Web Agency
+        </div>
 
-		<!-- Sticky Header  -->
-		<div class="sticky-header">
-			<div class="auto-container">
-				<div class="inner-container">
-					<!--Logo-->
-					<div class="logo">
-						<a href="index.html" title=""><img src="images/logo.png" alt="" title=""></a>
-					</div>
-		
-					<!--Right Col-->
-					<div class="nav-outer">
-						<!-- Main Menu -->
-						<nav class="main-menu">
-							<div class="navbar-collapse show collapse clearfix">
-								<ul class="navigation clearfix">
-									<!--Keep This Empty / Menu will come through Javascript-->
-								</ul>
-							</div>
-						</nav><!-- Main Menu End-->
-		
-						<!--Mobile Navigation Toggler-->
-						<div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
-					</div>
-				</div>
-			</div>
-		</div><!-- End Sticky Menu -->
-	</header>
-	<!--End Main Header -->
-	
-	<!-- Banner Section Three -->
-	<section class="banner-section-three">
-		<div class="banner-carousel owl-carousel owl-theme default-navs">
-			<!-- Slide Item -->
-			<div class="slide-item">
-				<div class="bg-image" style="background-image: url(images/main-slider/1.jpg);"></div>
-				<div class="auto-container">
-					<div class="content-box">
-						<!-- <span class="sub-title animate-1">ibex WebTech</span> -->
-						<h1 class="title animate-2">Crafting Digital <br> Experiences with <br> Precision and Passion</h1>
-						
-					</div>
-				</div>
-			</div>
+        <h1 class="hero-title">
+          Crafting Digital<br>
+          Experiences<br>
+          with <span class="accent">Precision</span>
+        </h1>
 
-			<!-- Slide Item -->
-			<div class="slide-item">
-				<div class="bg-image" style="background-image: url(images/main-slider/2.jpg);"></div>
-				<div class="auto-container">
-					<div class="content-box">
-						<span class="sub-title animate-1">&nbsp;</span>
-						<h1 class="title animate-2">&nbsp;</h1><br>
-						<div class="btn-box animate-3">
-							<a href="#" class="theme-btn hover-light"><span class="btn-title">&nbsp;</span></a><br>
-						</div>
-					</div>
-				</div>
-			</div>
+        <p class="hero-desc">
+          From concept to launch — we build fast, beautiful, and conversion-focused websites for small businesses across Ohio and the USA.
+        </p>
 
-			<!-- Slide Item -->
-			<div class="slide-item">
-				<div class="bg-image" style="background-image: url(images/main-slider/3.jpg);"></div>
-				<div class="auto-container">
-					<div class="content-box">
-						<span class="sub-title animate-1">&nbsp;</span>
-						<h1 class="title animate-2">&nbsp;</h1><br>
-						<div class="btn-box animate-3">
-							<a href="#" class="theme-btn hover-light"><span class="btn-title">&nbsp;</span></a><br>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Banner Section -->
-	
-	<!-- Services Section Four -->
-	<section class="services-section-four">
-		<div class="bg bg-pattern-13"></div>
-		<div class="auto-container">
-			<div class="sec-title text-center">
-				<h2>Our Services</h2>
-				<span class="sub-title"></span>
-			</div>
+        <div class="hero-cta-row">
+          <a href="contact-us.html" class="btn-primary-hero">Get a Free Quote</a>
+          <a href="portfolio.html" class="btn-secondary-hero">
+            View Our Work
+            <span class="arrow"><i class="fa fa-arrow-right"></i></span>
+          </a>
+        </div>
 
-			<div class="row">
-				<!-- Service Block Four -->
-				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image-box">
-							<figure class="image"><a href="website-design-development.html"><img src="images/services/website-development.jpg" alt=""></a></figure>
-						</div>
-						<div class="content-box">
-							<i class="icon flaticon-front-end"></i>
-							<h5 class="title"><a href="website-design-development.html">Website <br>Design & Development</a></h5>
-							<!-- <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div> -->
-						</div>
-					</div>
-				</div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">30<span>+</span></div>
+            <div class="stat-label">Expert Team</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100<span>%</span></div>
+            <div class="stat-label">Client Focus</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1<span>yr</span></div>
+            <div class="stat-label">Free Hosting</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24<span>/7</span></div>
+            <div class="stat-label">Support</div>
+          </div>
+        </div>
+      </div>
 
-				<!-- Service Block Four -->
-				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image-box">
-							<figure class="image"><a href="website-maintenance.html"><img src="images/services/website-maintenance.jpg" alt=""></a></figure>
-						</div>
-						<div class="content-box">
-							<i class="icon flaticon-android-logo"></i>
-							<h5 class="title"><a href="website-maintenance.html">Website <br>Maintenance</a></h5>
-							<!-- <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div> -->
-						</div>
-					</div>
-				</div>
+      <!-- Right: card -->
+      <div class="col-lg-6 col-md-12">
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <span class="floating-badge top-right">
+              <i class="fa fa-star" style="color:#f55c15;"></i> #1 in Ohio
+            </span>
+            <div class="hero-card">
+              <div class="hero-card-badge">
+                <i class="fa fa-code"></i> What We Build
+              </div>
+              <div class="hero-card-title">Complete Web Solutions</div>
+              <div class="service-pill-list">
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-desktop"></i></div>
+                  <div class="service-pill-text">Website Design &amp; Development</div>
+                </div>
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-wrench"></i></div>
+                  <div class="service-pill-text">Website Maintenance &amp; Support</div>
+                </div>
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-paint-brush"></i></div>
+                  <div class="service-pill-text">Logo Design &amp; Brand Identity</div>
+                </div>
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-search"></i></div>
+                  <div class="service-pill-text">SEO &amp; Google Promotion</div>
+                </div>
+              </div>
+            </div>
+            <span class="floating-badge bottom-left">
+              <i class="fa fa-map-marker" style="color:#f55c15;"></i>&nbsp; Coldwater, Ohio 45828
+            </span>
+          </div>
+        </div>
+      </div>
 
-				<!-- Service Block Four -->
-				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image-box">
-							<figure class="image"><a href="logo-design.html"><img src="images/services/logo-design.jpg" alt=""></a></figure>
-						</div>
-						<div class="content-box">
-							<i class="icon flaticon-front-end"></i>
-							<h5 class="title"><a href="logo-design.html">Logo <br>Design</a></h5>
-							<!-- <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div> -->
-						</div>
-					</div>
-				</div>
+    </div>
+  </div>
+</section>
+<!-- End Hero -->
 
-			</div>
-			
-		</div>
-	</section>
-	<!--End services-section Two-->
 
-	 <!-- Why Choose Us Three-->
-	<section class="why-choose-us-three">
-		<div class="bg bg-pattern-13"></div>
-		<div class="auto-container">
-			<div class="row">
-				<!-- Content Column -->
-				<div class="content-column col-lg-7 col-md-12">
-					<div class="inner-column">
-						<div class="sec-title light">
-							<span class="sub-title">Why choose</span>
-							<h2> ibex WebTech</h2>
-							<div class="text">Choosing a company is an important decision that can significantly impact the success of your online presence. Here are some reasons why you might consider us:</div>
-						</div>
+<!-- ===== SERVICES ===== -->
+<section class="section-services">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-heading">Everything Your<br>Business Needs Online</h2>
+    <p class="section-subhead">Custom-built solutions designed to grow your business and make a lasting impression.</p>
 
-						<div class="row">
-							<div class="content-column col-lg-6 col-md-12">
-								<div class="inner-column">
-									<div class="sec-title light">
-										<ul class="list-style-two">
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Expertise and Experience</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Customized Solutions</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Professional Design and User Experience</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Technology and Trends</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Responsive and Mobile-Friendly Design</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+    <div class="services-grid">
 
-							<div class="content-column col-lg-6 col-md-12">
-								<div class="inner-column">
-									<div class="sec-title light">
-										<ul class="list-style-two">
-											<li><i class="fa fa-arrow-alt-circle-right"></i> SEO-Friendly Approach</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Timely Delivery and Support</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Client Satisfaction</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Cost-Effectiveness</li>
-											<li><i class="fa fa-arrow-alt-circle-right"></i> Positive Reputation</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
+      <!-- Card 1 -->
+      <a href="website-design-development.html" class="svc-card">
+        <div class="svc-card-image">
+          <img src="images/services/website-development.jpg" alt="Website Design & Development Ohio">
+        </div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon"><i class="fa fa-desktop"></i></div>
+          <div class="svc-card-title">Website Design &amp;<br>Development</div>
+          <p class="svc-card-text">Custom, responsive, and performance-optimized websites built to convert visitors into customers.</p>
+          <div class="svc-card-link">Learn More <i class="fa fa-arrow-right"></i></div>
+        </div>
+      </a>
 
-						<div class="text" style="text-align: justify;">Ultimately, the choice of a company depends on your specific needs and preferences. We encourage you to reach out to us, discuss your requirements, and evaluate how our company can fulfill your website development needs effectively.</div>
+      <!-- Card 2 -->
+      <a href="website-maintenance.html" class="svc-card">
+        <div class="svc-card-image">
+          <img src="images/services/website-maintenance.jpg" alt="Website Maintenance Ohio">
+        </div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon"><i class="fa fa-shield"></i></div>
+          <div class="svc-card-title">Website<br>Maintenance</div>
+          <p class="svc-card-text">Keep your site secure, fast, and up-to-date with our professional ongoing maintenance plans.</p>
+          <div class="svc-card-link">Learn More <i class="fa fa-arrow-right"></i></div>
+        </div>
+      </a>
 
-						
+      <!-- Card 3 -->
+      <a href="logo-design.html" class="svc-card">
+        <div class="svc-card-image">
+          <img src="images/services/logo-design.jpg" alt="Logo Design Ohio">
+        </div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon"><i class="fa fa-paint-brush"></i></div>
+          <div class="svc-card-title">Logo<br>Design</div>
+          <p class="svc-card-text">Distinctive, memorable logos that tell your brand's story and stand out from the competition.</p>
+          <div class="svc-card-link">Learn More <i class="fa fa-arrow-right"></i></div>
+        </div>
+      </a>
 
-					</div>
-				</div>
+    </div>
+  </div>
+</section>
+<!-- End Services -->
 
-				<!-- Image Column -->
-				<div class="image-column col-lg-5 col-md-12">
-					<div class="inner-column">
-						<div class="image-box">
-							<figure class="image"><img src="images/resource/why-us-3.jpg" alt=""></figure>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
-	<!-- end-benifet-sec -->
-	
-	<!-- News Section -->
-	<section class="news-section-two pb-0">
-		<div class="bg bg-lines"></div>
-		<div class="auto-container">
-		</div>
-	</section>
-	<!--blog-section-->
 
-	<!-- Main Footer -->
-	<footer class="main-footer">
-		<div class="bg bg-pattern-6"></div>
+<!-- ===== LOCATIONS STRIP ===== -->
+<section class="section-locations">
+  <div class="container">
+    <div class="locations-label">Serving communities across Ohio &amp; beyond</div>
+    <div class="locations-scroll">
+      <a href="ohio/index.html" class="location-chip">Ohio</a>
+      <a href="lima/index.html" class="location-chip">Lima</a>
+      <a href="muncie/index.html" class="location-chip">Muncie</a>
+      <a href="troy/index.html" class="location-chip">Troy</a>
+      <a href="vanwert/index.html" class="location-chip">Van Wert</a>
+      <a href="greenville/index.html" class="location-chip">Greenville</a>
+      <a href="celina/index.html" class="location-chip">Celina</a>
+      <a href="usa/index.html" class="location-chip">USA</a>
+    </div>
+  </div>
+</section>
+<!-- End Locations -->
 
-		<!-- Widgets Section -->
-		<div class="widgets-section">
-			<div class="auto-container">
-				<div class="row">
-					
-					<!-- Footer COlumn -->
-					<div class="footer-column col-xl-2 col-lg-2 col-md-6 col-sm-12">
-						<div class="widget links-widget">
-							<h6 class="widget-title">Explore</h6><hr style="color: var(--theme-color1); width: 70px;">
-							<div class="widget-content">
-								<ul class="user-links">
-									<li><i class="fa fa-angle-double-right" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="index.html">Home</a></li>
-									<li><i class="fa fa-angle-double-right" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="services.html">Services</a></li>
-									<li><i class="fa fa-angle-double-right" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="portfolio.html">Portfolio</a></li>
-									<li><i class="fa fa-angle-double-right" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="contact-us.html">Contact Us</a></li>
-								</ul>                                
-							</div>
-						</div>
-					</div>
-					
-					<!-- Footer COlumn -->
-					<div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
-						<div class="widget links-widget">
-							<h6 class="widget-title">Our Services</h6><hr style="color: var(--theme-color1); width: 120px;">
-							<div class="widget-content">
-								<ul class="user-links">
-									<li><i class="fa fa-angle-double-right" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="website-design-development.html">Website Design & Development</a></li>
-									<li><i class="fa fa-angle-double-right" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="website-maintenance.html">Website Maintenance</a></li>
-									<li><i class="fa fa-angle-double-right" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="logo-design.html">Logo Design</a></li>
-								</ul>                                
-							</div>
-						</div>
-					</div>
-					
-					<!-- Footer COlumn -->
-					<div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
-						<div class="widget links-widget">
-							<h6 class="widget-title">Contact Details</h6><hr style="color: var(--theme-color1); width: 150px;">
-							<div class="widget-content">
-								<ul class="user-links">
-									<li><i class="icon lnr-icon-phone-handset" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="tel:+4192684673">(419) 268-4673</a></li>
 
-									<li><i class="icon lnr-icon-envelope1" style="color: #ee763c;"></i> &nbsp;&nbsp; <a href="mailto:contactus@ibexwebtech.com">contactus@ibexwebtech.com</a></li>
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="section-why">
+  <div class="container">
+    <div class="row align-items-center g-5">
 
-									<li><i class="icon lnr-icon-map" style="color: #ee763c;"></i> &nbsp;&nbsp; Coldwater, Ohio 45828</li>
-								</ul>                                
-							</div>
-						</div>
-					</div>
-					
-					<!-- Footer COlumn -->
-					<div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
-						<div class="widget links-widget">
-							<h6 class="widget-title">Location Map</h6><hr style="color: var(--theme-color1); width: 150px;">
-							<div class="widget-content">
-								<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775096.1695630684!2d-85.17584720613948!3d40.6360694841141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x814e1af0a204619b%3A0x990c71c1da17a5e1!2sibex%20webtech!5e0!3m2!1sen!2sin!4v1690309313851!5m2!1sen!2sin" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><p>                             
-							</div>
-						</div>
-					</div>
+      <!-- Image -->
+      <div class="col-lg-5 col-md-12">
+        <div class="why-image-wrap">
+          <img src="images/resource/why-us-3.jpg" alt="Why Choose ibex WebTech">
+          <div class="why-image-badge">
+            <div class="why-badge-number">30+</div>
+            <div class="why-badge-label">Expert Web<br>Professionals</div>
+          </div>
+        </div>
+      </div>
 
-				</div>
-			</div>
-		</div>
+      <!-- Content -->
+      <div class="col-lg-7 col-md-12">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-heading">Why Businesses<br>Trust ibex WebTech</h2>
+        <p style="color:#7a8299; font-size:1rem; line-height:1.75; margin: 18px 0 32px; max-width: 480px;">
+          Choosing the right web partner matters. We combine technical expertise with creative design to deliver websites that truly work for your business.
+        </p>
 
-		<div class="row">
-						<div class="col-md-12">
-							<p style="color: transparent;">
-								<a href="ohio/index.html">Ohio</a> | <a
-									href="lima/index.html">Lima</a> | <a
-									href="muncie/index.html">Muncie</a> | <a href="troy/index.html">Troy</a> |
-								<a href="vanwert/index.html">Vanwert</a>
-								| <a href="greenville/index.html">Greenville</a> | <a href="celina/index.html">Celina</a>
-								| <a href="usa/index.html">USA</a> | 
-							</p>
-						</div>
-					</div>
+        <ul class="why-checklist">
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Expertise &amp; Experience</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Customized Solutions</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Professional Design &amp; UX</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Latest Tech &amp; Trends</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Mobile-Responsive Builds</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>SEO-Friendly Approach</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Timely Delivery</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Client Satisfaction First</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Cost-Effective Pricing</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>1-Year Free Hosting</span></li>
+        </ul>
 
-		<!--  Footer Bottom -->
-		<div class="footer-bottom">
-			<div class="auto-container">
-				<div class="row">
-					<div class="links-column col-lg-6 col-md-6 order-3">
-						<ul class="footer-links">
-							<li style="color: transparent;">Designed & Developed by <a href="https://www.ssrwebsolutions.net/" target="_blank" style="color: transparent;"> SSR Web Solutions</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-6 col-md-6">
-						<p class="copyright-text">© Copyright <a href="index.html" target="_blank" style="color: #ee763c;"> ibex WebTech</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!--End Main Footer -->
+        <a href="services.html" class="btn-primary-hero" style="margin-top: 36px; display: inline-block;">
+          Explore Our Services
+        </a>
+      </div>
 
-</div><!-- End Page Wrapper -->
+    </div>
+  </div>
+</section>
+<!-- End Why Choose Us -->
+
+
+<!-- ===== PORTFOLIO PREVIEW ===== -->
+<section class="section-portfolio">
+  <div class="container">
+    <div class="section-label">Our Work</div>
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <h2 class="section-heading" style="margin-bottom:0;">Recent Projects</h2>
+      <a href="portfolio.html" class="btn-secondary-hero" style="margin-bottom:6px;">
+        See All Projects <span class="arrow"><i class="fa fa-arrow-right"></i></span>
+      </a>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card">
+        <div class="portfolio-card-image">
+          <img src="images/resource/portfolio-1.jpg" alt="Fort Recovery Veterinary Center">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-title">Fort Recovery Veterinary Center</div>
+          <a href="https://ftrecoveryvet.com/" target="_blank" class="portfolio-card-link">
+            Visit <i class="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-card-image">
+          <img src="images/resource/portfolio-2.jpg" alt="Coldwater Animal Clinic">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-title">Coldwater Animal Clinic</div>
+          <a href="https://coldwateranimalclinic.com/" target="_blank" class="portfolio-card-link">
+            Visit <i class="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-card-image">
+          <img src="images/resource/portfolio-3.jpg" alt="St. Marys Veterinary Clinic">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-title">St. Marys Veterinary Clinic</div>
+          <a href="https://stmarysveterinary.com/" target="_blank" class="portfolio-card-link">
+            Visit <i class="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Portfolio -->
+
+
+<!-- ===== CTA BANNER ===== -->
+<section class="section-cta">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-banner-inner">
+        <div class="cta-text">
+          <h2>Ready to Grow Your Business Online?</h2>
+          <p>Let's build something great together — fast turnaround, fair pricing, real results.</p>
+        </div>
+        <a href="contact-us.html" class="btn-cta-white">Get a Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End CTA -->
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="ibex-footer">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Brand -->
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+        <div class="footer-brand">
+          <a href="index.html"><img src="images/logo.png" alt="ibex WebTech" width="160"></a>
+          <p>Professional website design, development, and maintenance services for businesses across Ohio and the USA.</p>
+        </div>
+      </div>
+
+      <!-- Explore -->
+      <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links-list">
+          <li><a href="index.html"><i class="fa fa-angle-right"></i> Home</a></li>
+          <li><a href="services.html"><i class="fa fa-angle-right"></i> Services</a></li>
+          <li><a href="portfolio.html"><i class="fa fa-angle-right"></i> Portfolio</a></li>
+          <li><a href="contact-us.html"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+        <div class="footer-heading">Our Services</div>
+        <ul class="footer-links-list">
+          <li><a href="website-design-development.html"><i class="fa fa-angle-right"></i> Website Design &amp; Development</a></li>
+          <li><a href="website-maintenance.html"><i class="fa fa-angle-right"></i> Website Maintenance</a></li>
+          <li><a href="logo-design.html"><i class="fa fa-angle-right"></i> Logo Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="footer-heading">Contact Details</div>
+        <div class="footer-contact-item">
+          <div class="fc-icon"><i class="fa fa-phone"></i></div>
+          <div class="fc-info">
+            <a href="tel:+4192684673">(419) 268-4673</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="fc-icon"><i class="fa fa-envelope"></i></div>
+          <div class="fc-info">
+            <a href="mailto:contactus@ibexwebtech.com">contactus@ibexwebtech.com</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="fc-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="fc-info">
+            <span>Coldwater, Ohio 45828</span>
+          </div>
+        </div>
+        <div class="footer-map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775096.1695630684!2d-85.17584720613948!3d40.6360694841141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x814e1af0a204619b%3A0x990c71c1da17a5e1!2sibex%20webtech!5e0!3m2!1sen!2sin!4v1690309313851!5m2!1sen!2sin" width="100%" height="140" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <p>© 2024 <a href="index.html">ibex WebTech</a>. All rights reserved.</p>
+      <p style="color:#2a2e40; font-size:0.8rem;">Designed &amp; Developed by SSR Web Solutions</p>
+    </div>
+  </div>
+
+  <!-- Hidden SEO internal links -->
+  <div class="seo-links">
+    <a href="ohio/index.html">Ohio</a> | <a href="lima/index.html">Lima</a> | <a href="muncie/index.html">Muncie</a> | <a href="troy/index.html">Troy</a> | <a href="vanwert/index.html">Vanwert</a> | <a href="greenville/index.html">Greenville</a> | <a href="celina/index.html">Celina</a> | <a href="usa/index.html">USA</a>
+  </div>
+</footer>
+<!-- End Footer -->
+
 
 <!-- Scroll To Top -->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-<script src="js/jquery.js"></script> 
+<script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fancybox.js"></script>
@@ -439,6 +1499,6 @@
 <script src="js/select2.min.js"></script>
 <script src="js/owl.js"></script>
 <script src="js/script.js"></script>
-</body>
 
+</body>
 </html>
