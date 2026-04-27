@@ -855,23 +855,11 @@ body { padding-top: 72px; }
   box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-.portfolio-card-image {
-  height: 200px;
-  overflow: hidden;
-}
 
-.portfolio-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.85);
-  transition: transform 0.5s ease, filter 0.4s ease;
-}
 
-.portfolio-card:hover .portfolio-card-image img {
-  transform: scale(1.05);
-  filter: brightness(1);
-}
+
+
+.portfolio-card:hover 
 
 .portfolio-card-body {
   padding: 22px 24px;
@@ -910,6 +898,110 @@ body { padding-top: 72px; }
   background: rgba(245,92,21,0.2);
   color: #f55c15;
   text-decoration: none;
+}
+
+
+/* ---- PORTFOLIO BROWSER MOCKUP ---- */
+.port-browser-wrap {
+  display: block;
+  text-decoration: none;
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.port-browser-bar {
+  background: #1e2330;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.port-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.port-dot.r { background: #ff5f57; }
+.port-dot.y { background: #febc2e; }
+.port-dot.g { background: #28c840; }
+
+.port-url {
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  padding: 3px 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  color: #606880;
+  margin-left: 8px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.port-preview {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.port-preview-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(245,92,21,0.15);
+  border: 1px solid rgba(245,92,21,0.25);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #f55c15;
+  transition: all 0.3s ease;
+}
+
+.port-preview-name {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #b0b8d0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.port-preview-visit {
+  font-family: "Syne", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f55c15;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover .port-preview {
+  filter: brightness(1.15);
+}
+
+.portfolio-card:hover .port-preview-icon {
+  background: rgba(245,92,21,0.25);
+  transform: scale(1.08);
+}
+
+.portfolio-card:hover .port-preview-visit {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---- SCROLL TO TOP ---- */
@@ -1201,40 +1293,64 @@ body { padding-top: 72px; }
       </a>
     </div>
 
-    <div class="portfolio-grid">
+    <div class="portfolio-grid" style="margin-top:56px;">
 
       <div class="portfolio-card">
-        <div class="portfolio-card-image">
-          <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=800&h=500&q=80&auto=format&fit=crop" alt="Fort Recovery Veterinary Center">
-        </div>
+        <a href="https://ftrecoveryvet.com/" target="_blank" class="port-browser-wrap">
+          <div class="port-browser-bar">
+            <span class="port-dot r"></span><span class="port-dot y"></span><span class="port-dot g"></span>
+            <span class="port-url">ftrecoveryvet.com</span>
+          </div>
+          <div class="port-preview" style="background: linear-gradient(135deg,#1a2a1a 0%,#0f1f0f 100%);">
+            <div class="port-preview-icon"><i class="fa fa-paw"></i></div>
+            <div class="port-preview-name">Fort Recovery<br>Veterinary Center</div>
+            <div class="port-preview-visit">Click to Visit <i class="fa fa-external-link"></i></div>
+          </div>
+        </a>
         <div class="portfolio-card-body">
           <div class="portfolio-card-title">Fort Recovery Veterinary Center</div>
           <a href="https://ftrecoveryvet.com/" target="_blank" class="portfolio-card-link">
-            Visit <i class="fa fa-external-link"></i>
+            Visit Site <i class="fa fa-external-link"></i>
           </a>
         </div>
       </div>
 
       <div class="portfolio-card">
-        <div class="portfolio-card-image">
-          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=500&q=80&auto=format&fit=crop" alt="Coldwater Animal Clinic">
-        </div>
+        <a href="https://coldwateranimalclinic.com/" target="_blank" class="port-browser-wrap">
+          <div class="port-browser-bar">
+            <span class="port-dot r"></span><span class="port-dot y"></span><span class="port-dot g"></span>
+            <span class="port-url">coldwateranimalclinic.com</span>
+          </div>
+          <div class="port-preview" style="background: linear-gradient(135deg,#1a1f2e 0%,#0f1520 100%);">
+            <div class="port-preview-icon"><i class="fa fa-heart"></i></div>
+            <div class="port-preview-name">Coldwater<br>Animal Clinic</div>
+            <div class="port-preview-visit">Click to Visit <i class="fa fa-external-link"></i></div>
+          </div>
+        </a>
         <div class="portfolio-card-body">
           <div class="portfolio-card-title">Coldwater Animal Clinic</div>
           <a href="https://coldwateranimalclinic.com/" target="_blank" class="portfolio-card-link">
-            Visit <i class="fa fa-external-link"></i>
+            Visit Site <i class="fa fa-external-link"></i>
           </a>
         </div>
       </div>
 
       <div class="portfolio-card">
-        <div class="portfolio-card-image">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=500&q=80&auto=format&fit=crop" alt="St. Marys Veterinary Clinic">
-        </div>
+        <a href="https://stmarysveterinary.com/" target="_blank" class="port-browser-wrap">
+          <div class="port-browser-bar">
+            <span class="port-dot r"></span><span class="port-dot y"></span><span class="port-dot g"></span>
+            <span class="port-url">stmarysveterinary.com</span>
+          </div>
+          <div class="port-preview" style="background: linear-gradient(135deg,#1f1a2e 0%,#150f20 100%);">
+            <div class="port-preview-icon"><i class="fa fa-plus-square"></i></div>
+            <div class="port-preview-name">St. Marys<br>Veterinary Clinic</div>
+            <div class="port-preview-visit">Click to Visit <i class="fa fa-external-link"></i></div>
+          </div>
+        </a>
         <div class="portfolio-card-body">
           <div class="portfolio-card-title">St. Marys Veterinary Clinic</div>
           <a href="https://stmarysveterinary.com/" target="_blank" class="portfolio-card-link">
-            Visit <i class="fa fa-external-link"></i>
+            Visit Site <i class="fa fa-external-link"></i>
           </a>
         </div>
       </div>
