@@ -660,53 +660,7 @@ body { padding-top: 72px; }
   line-height: 1.3;
 }
 
-/* ---- SECTION: LOCATIONS STRIP ---- */
-.section-locations {
-  padding: 48px 0;
-  background: #0d1017;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  overflow: hidden;
-}
 
-.locations-label {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: #606880;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.locations-scroll {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.location-chip {
-  background: #12161f;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 100px;
-  padding: 8px 20px;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #7a8299;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.location-chip:hover {
-  border-color: rgba(245,92,21,0.3);
-  color: #f55c15;
-  background: rgba(245,92,21,0.05);
-  text-decoration: none;
-}
 
 /* ---- SECTION: CTA BANNER ---- */
 .section-cta {
@@ -1264,23 +1218,7 @@ body { padding-top: 72px; }
 <!-- End Services -->
 
 
-<!-- ===== LOCATIONS STRIP ===== -->
-<section class="section-locations">
-  <div class="container">
-    <div class="locations-label">Serving communities across Ohio &amp; beyond</div>
-    <div class="locations-scroll">
-      <a href="ohio/index.html" class="location-chip">Ohio</a>
-      <a href="lima/index.html" class="location-chip">Lima</a>
-      <a href="muncie/index.html" class="location-chip">Muncie</a>
-      <a href="troy/index.html" class="location-chip">Troy</a>
-      <a href="vanwert/index.html" class="location-chip">Van Wert</a>
-      <a href="greenville/index.html" class="location-chip">Greenville</a>
-      <a href="celina/index.html" class="location-chip">Celina</a>
-      <a href="usa/index.html" class="location-chip">USA</a>
-    </div>
-  </div>
-</section>
-<!-- End Locations -->
+
 
 
 <!-- ===== WHY CHOOSE US ===== -->
@@ -1441,12 +1379,6 @@ body { padding-top: 72px; }
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
         <div class="footer-heading">Contact Details</div>
         <div class="footer-contact-item">
-          <div class="fc-icon"><i class="fa fa-phone"></i></div>
-          <div class="fc-info">
-            
-          </div>
-        </div>
-        <div class="footer-contact-item">
           <div class="fc-icon"><i class="fa fa-envelope"></i></div>
           <div class="fc-info">
             <a href="mailto:contactus@ibexwebtech.com">contactus@ibexwebtech.com</a>
@@ -1466,7 +1398,7 @@ body { padding-top: 72px; }
     </div>
 
     <div class="footer-bottom-bar">
-      <p>© 2024 <a href="index.html">ibex WebTech</a>. All rights reserved.</p>
+      <p>© <span id="yr"></span> <a href="index.html">ibex WebTech</a>. All rights reserved.</p>
       <p style="color:#2a2e40; font-size:0.8rem;">Designed &amp; Developed by SSR Web Solutions</p>
     </div>
   </div>
@@ -1493,5 +1425,6 @@ body { padding-top: 72px; }
 <script src="js/owl.js"></script>
 <script src="js/script.js"></script>
 
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>
