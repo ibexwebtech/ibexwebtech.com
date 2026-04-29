@@ -1,13 +1,10 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "ibexwebtech",
   "compatibility_date": "2026-04-29",
-  "observability": {
-    "enabled": true
-  },
+  "observability": { "enabled": true },
   "assets": {
-    "directory": "public",
-    "exclude": ["**/.git/**", "**/.wrangler/**"]
+    "directory": "public"
   },
   "compatibility_flags": ["nodejs_compat"]
 }
