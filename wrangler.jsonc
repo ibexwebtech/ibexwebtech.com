@@ -3,12 +3,6 @@
   "compatibility_date": "2026-04-29",
   "assets": {
     "directory": ".",
-    "binding": "ASSETS",
     "not_found_handling": "single-page-application"
-  },
-  "upload": {
-    "rules": [
-      { "type": "Text", "globs": ["**/*.git/**"], "fallthrough": true }
-    ]
   }
 }
