@@ -1,1 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="utf-8">
+<title>ibex WebTech | Website Design & Development in Ohio, USA</title>
+<meta name="description" content="Ibex Webtech — Expert Web Designers & Developers serving Ohio, Lima, Greenville, Troy, Celina, Muncie, Vanwert and beyond. Affordable, modern websites with SEO & Google Promotion.">
+<meta name="keywords" content="Website Development Company Ohio, Web Designer Ohio, Lima, Greenville, Troy, Celina, Muncie, Vanwert, SEO Service Ohio, Logo Design Ohio">
+<link rel="canonical" href="https://www.ibexwebtech.com/" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5N62YTL54D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5N62YTL54D');
+</script>
+
+<!-- Stylesheets -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style-dark.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<style>
+/* =============================================
+   GLOBAL RESET & BASE
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --orange: #f55c15;
+  --orange-dark: #c53b00;
+  --bg-main: #080a0f;
+  --bg-card: #12161f;
+  --bg-mid: #0d1017;
+  --text-primary: #f0f2f7;
+  --text-secondary: #b0b8d0;
+  --text-muted: #7a8299;
+  --border: rgba(255,255,255,0.07);
+  --border-orange: rgba(245,92,21,0.25);
+}
+
+html, body { margin: 0; padding: 0; background: var(--bg-main); }
+
+/* =============================================
+   HEADER — fixed, always visible
+   ============================================= */
+.main-header {
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: rgba(8,10,15,0.97) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245,92,21,0.15);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.5);
+}
+
+.main-header .main-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 72px;
+}
+
+/* Hide old sticky header clone entirely */
+.sticky-header { display: none !important; }
+
+body { padding-top: 72px; }
+
+/* Nav links */
+.main-header .navigation > li > a {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary) !important;
+  padding: 8px 16px !important;
+  transition: color 0.2s ease;
+}
+.main-header .navigation > li > a:hover,
+.main-header .navigation > li.current > a { color: var(--orange) !important; }
+
+/* Dropdown */
+.main-header .navigation .dropdown ul {
+  background: #0f1219 !important;
+  border: 1px solid var(--border-orange) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6) !important;
+  min-width: 220px;
+  padding: 8px 0;
+}
+.main-header .navigation .dropdown ul li a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text-secondary) !important;
+  padding: 10px 20px !important;
+}
+.main-header .navigation .dropdown ul li a:hover {
+  color: var(--orange) !important;
+  background: rgba(245,92,21,0.07) !important;
+}
+
+/* Header CTA button */
+.main-header .theme-btn.btn-style-one {
+  font-family: 'Syne', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark)) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 22px !important;
+  box-shadow: 0 4px 16px rgba(245,92,21,0.3) !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap;
+  color: #fff !important;
+}
+.main-header .theme-btn.btn-style-one:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(245,92,21,0.45) !important;
+}
+
+/* Mobile hamburger — always visible on mobile */
+.main-header .mobile-nav-toggler {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border-orange);
+  cursor: pointer;
+  background: rgba(245,92,21,0.07);
+}
+.main-header .mobile-nav-toggler .icon {
+  color: var(--orange);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@media (max-width: 991px) {
+  .main-header .nav-outer { display: none !important; }
+  .main-header .mobile-nav-toggler { display: flex !important; }
+  .main-header .main-box { padding: 0 20px; }
+  .main-header .outer-box .theme-btn { display: none !important; }
+}
+
+/* Mobile slide-out panel */
+.mobile-menu .menu-box {
+  background: #0b0e16 !important;
+  border-right: 1px solid var(--border-orange) !important;
+}
+.mobile-menu .navigation li a { color: var(--text-secondary) !important; }
+.mobile-menu .navigation li a:hover { color: var(--orange) !important; }
+.mobile-menu .close-btn { color: var(--orange) !important; }
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  min-height: calc(100vh - 72px);
+  background: var(--bg-main);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(245,92,21,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,92,21,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 40%, transparent 100%);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 700px; height: 700px;
+  background: radial-gradient(ellipse, rgba(245,92,21,0.10) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-inner { position: relative; z-index: 2; padding: 70px 0 80px; width: 100%; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(245,92,21,0.09);
+  border: 1px solid rgba(245,92,21,0.22);
+  border-radius: 100px; padding: 6px 16px;
+  font-family: 'Syne', sans-serif; font-size: 0.73rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--orange);
+  margin-bottom: 24px;
+}
+.hero-eyebrow .dot {
+  width: 6px; height: 6px;
+  background: var(--orange); border-radius: 50%;
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+.hero-title {
+  font-family: 'Syne', sans-serif; font-weight: 800;
+  font-size: clamp(2.6rem, 6.5vw, 5rem);
+  line-height: 1.02; letter-spacing: -0.035em;
+  color: var(--text-primary); margin-bottom: 24px;
+}
+.hero-title .accent {
+  color: var(--orange); position: relative; display: inline-block;
+}
+.hero-title .accent::after {
+  content: ''; position: absolute;
+  bottom: 2px; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange), transparent);
+  border-radius: 2px;
+}
+
+.hero-desc {
+  font-family: 'DM Sans', sans-serif; font-size: 1.05rem;
+  line-height: 1.78; color: var(--text-secondary);
+  max-width: 500px; margin-bottom: 36px;
+}
+
+.hero-cta-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+
+.btn-primary-hero {
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  color: #fff; font-family: 'Syne', sans-serif; font-weight: 700;
+  font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 14px 30px; border-radius: 8px; border: none;
+  text-decoration: none; display: inline-block;
+  box-shadow: 0 6px 24px rgba(245,92,21,0.32); transition: all 0.3s ease;
+}
+.btn-primary-hero:hover {
+  transform: translateY(-2px); box-shadow: 0 10px 36px rgba(245,92,21,0.48);
+  color: #fff; text-decoration: none;
+}
+
+.btn-secondary-hero {
+  color: var(--text-muted); font-family: 'Syne', sans-serif; font-weight: 600;
+  font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.3s ease;
+}
+.btn-secondary-hero:hover { color: var(--orange); text-decoration: none; }
+.btn-secondary-hero .arrow {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; transition: all 0.3s ease;
+}
+.btn-secondary-hero:hover .arrow {
+  border-color: var(--orange); background: rgba(245,92,21,0.12);
+}
+
+.hero-visual { position: relative; z-index: 2; }
+.hero-card-stack { position: relative; padding: 30px; }
+
+.hero-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5); position: relative;
+}
+.hero-card::before {
+  content: ''; position: absolute;
+  top: -1px; left: 30px; right: 30px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245,92,21,0.4), transparent);
+}
+.hero-card-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(245,92,21,0.1); border-radius: 6px; padding: 6px 12px;
+  font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 16px;
+}
+.hero-card-title {
+  font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 14px;
+}
+.service-pill-list { display: flex; flex-direction: column; gap: 8px; }
+.service-pill {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.055);
+  border-radius: 10px; padding: 11px 15px; transition: all 0.3s ease;
+}
+.service-pill:hover { border-color: var(--border-orange); background: rgba(245,92,21,0.05); }
+.service-pill-icon {
+  width: 34px; height: 34px; background: rgba(245,92,21,0.12);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  color: var(--orange); font-size: 0.95rem; flex-shrink: 0;
+}
+.service-pill-text {
+  font-family: 'DM Sans', sans-serif; font-size: 0.875rem;
+  color: var(--text-secondary); font-weight: 500;
+}
+
+.floating-badge {
+  position: absolute;
+  background: var(--bg-card); border: 1px solid var(--border-orange);
+  border-radius: 12px; padding: 10px 16px;
+  font-family: 'Syne', sans-serif; font-size: 0.73rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4); white-space: nowrap; z-index: 3;
+}
+.floating-badge.top-right {
+  top: -10px; right: 10px; color: var(--orange);
+  animation: subtleFloat 4s ease-in-out infinite;
+}
+.floating-badge.bottom-left {
+  bottom: 10px; left: 0; color: var(--text-secondary);
+  animation: subtleFloat 4s ease-in-out infinite 2s;
+}
+@keyframes subtleFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+/* =============================================
+   SECTION COMMONS
+   ============================================= */
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--orange); margin-bottom: 12px;
+}
+.section-label::before {
+  content: ''; display: block; width: 22px; height: 2px;
+  background: var(--orange); border-radius: 2px;
+}
+.section-heading {
+  font-family: 'Syne', sans-serif; font-weight: 800;
+  font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+  line-height: 1.1; letter-spacing: -0.025em; color: var(--text-primary); margin-bottom: 14px;
+}
+.section-subhead {
+  font-family: 'DM Sans', sans-serif; font-size: 0.98rem;
+  color: var(--text-muted); max-width: 500px; line-height: 1.72;
+}
+
+/* =============================================
+   SERVICES
+   ============================================= */
+.section-services {
+  padding: 80px 0; background: var(--bg-mid);
+  position: relative; overflow: hidden;
+}
+.section-services::before {
+  content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 600px;
+  background: radial-gradient(ellipse, rgba(245,92,21,0.045) 0%, transparent 70%);
+  pointer-events: none;
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 22px; margin-top: 42px;
+}
+@media (max-width: 991px) { .services-grid { grid-template-columns: 1fr; } }
+@media (min-width: 600px) and (max-width: 991px) { .services-grid { grid-template-columns: repeat(2,1fr); } }
+
+.svc-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 18px; overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  text-decoration: none; display: flex; flex-direction: column;
+}
+.svc-card:hover {
+  border-color: var(--border-orange); transform: translateY(-7px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45), 0 0 50px rgba(245,92,21,0.10);
+  text-decoration: none;
+}
+.svc-card-image { overflow: hidden; position: relative; height: 195px; }
+.svc-card-image::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+  background: linear-gradient(transparent, var(--bg-card)); pointer-events: none;
+}
+.svc-card-image img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s ease, filter 0.4s ease;
+  filter: brightness(0.75) saturate(0.85);
+}
+.svc-card:hover .svc-card-image img { transform: scale(1.07); filter: brightness(0.95) saturate(1.05); }
+.svc-card-body { padding: 24px 26px 28px; flex: 1; display: flex; flex-direction: column; }
+.svc-card-icon {
+  width: 46px; height: 46px; background: rgba(245,92,21,0.11); border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px; font-size: 1.2rem; color: var(--orange); transition: all 0.3s ease;
+}
+.svc-card:hover .svc-card-icon { background: rgba(245,92,21,0.2); transform: scale(1.07); }
+.svc-card-title {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem;
+  color: var(--text-primary); margin-bottom: 9px; line-height: 1.3;
+}
+.svc-card-text {
+  font-family: 'DM Sans', sans-serif; font-size: 0.865rem;
+  color: var(--text-muted); line-height: 1.65; flex: 1;
+}
+.svc-card-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Syne', sans-serif; font-size: 0.76rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--orange);
+  margin-top: 16px; transition: gap 0.3s ease;
+}
+.svc-card:hover .svc-card-link { gap: 10px; }
+
+/* =============================================
+   WHY CHOOSE US
+   ============================================= */
+.section-why { padding: 80px 0; background: var(--bg-main); position: relative; overflow: hidden; }
+.section-why::after {
+  content: ''; position: absolute; bottom: -150px; right: -100px;
+  width: 600px; height: 600px;
+  background: radial-gradient(ellipse, rgba(245,92,21,0.065) 0%, transparent 65%);
+  pointer-events: none;
+}
+.why-checklist {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+}
+@media (max-width: 576px) { .why-checklist { grid-template-columns: 1fr; } }
+.why-item {
+  display: flex; align-items: center; gap: 11px;
+  padding: 11px 14px; border-radius: 9px; border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.why-item:hover { background: rgba(245,92,21,0.05); border-color: rgba(245,92,21,0.14); }
+.why-item i { color: var(--orange); font-size: 1rem; flex-shrink: 0; }
+.why-item span { font-family: 'DM Sans', sans-serif; font-size: 0.875rem; color: var(--text-secondary); }
+.why-image-wrap {
+  position: relative; border-radius: 22px; overflow: hidden;
+  border: 1px solid var(--border); box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+.why-image-wrap img { width: 100%; display: block; filter: brightness(0.85); }
+
+/* =============================================
+   PORTFOLIO
+   ============================================= */
+.section-portfolio { padding: 80px 0; background: var(--bg-mid); overflow: hidden; position: relative; }
+.portfolio-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 22px; margin-top: 42px;
+}
+@media (max-width: 767px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+.portfolio-card {
+  border-radius: 16px; overflow: hidden;
+  background: var(--bg-card); border: 1px solid var(--border); transition: all 0.35s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-6px); border-color: var(--border-orange);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+.portfolio-card-body {
+  padding: 18px 22px; display: flex; align-items: center;
+  justify-content: space-between; gap: 10px;
+}
+.portfolio-card-title {
+  font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700;
+  color: var(--text-primary); line-height: 1.3;
+}
+.portfolio-card-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(245,92,21,0.1); border: 1px solid var(--border-orange);
+  border-radius: 100px; padding: 6px 14px;
+  font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--orange);
+  text-decoration: none; transition: all 0.3s ease; white-space: nowrap; flex-shrink: 0;
+}
+.portfolio-card-link:hover { background: rgba(245,92,21,0.2); color: var(--orange); text-decoration: none; }
+
+/* Browser mockup bar */
+.port-browser-wrap { display: block; text-decoration: none; }
+.port-browser-bar {
+  background: #1a1f2e; padding: 9px 14px;
+  display: flex; align-items: center; gap: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.port-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.port-dot.r{background:#ff5f57} .port-dot.y{background:#febc2e} .port-dot.g{background:#28c840}
+.port-url {
+  background: rgba(255,255,255,0.06); border-radius: 5px; padding: 3px 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 0.7rem; color: #606880;
+  margin-left: 6px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* Real screenshot thumbnail */
+.port-screenshot { height: 190px; overflow: hidden; position: relative; }
+.port-screenshot img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center;
+  transition: transform 0.5s ease, filter 0.3s ease; filter: brightness(0.9);
+}
+.portfolio-card:hover .port-screenshot img { transform: scale(1.04) translateY(-4px); filter: brightness(1.0); }
+.port-screenshot-overlay {
+  position: absolute; inset: 0;
+  background: rgba(8,10,15,0); transition: background 0.3s ease;
+  display: flex; align-items: center; justify-content: center;
+}
+.portfolio-card:hover .port-screenshot-overlay { background: rgba(8,10,15,0.45); }
+.port-visit-label {
+  font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: #fff;
+  background: var(--orange); padding: 8px 18px; border-radius: 100px;
+  opacity: 0; transform: translateY(8px); transition: all 0.3s ease;
+}
+.portfolio-card:hover .port-visit-label { opacity: 1; transform: translateY(0); }
+
+/* =============================================
+   CTA BANNER
+   ============================================= */
+.section-cta { padding: 70px 0; background: var(--bg-main); }
+.cta-banner {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 55%, #952a00 100%);
+  border-radius: 24px; padding: 60px 56px; position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: ''; position: absolute; top: -50%; right: -8%;
+  width: 380px; height: 380px; background: rgba(255,255,255,0.055); border-radius: 50%;
+}
+.cta-banner::after {
+  content: ''; position: absolute; bottom: -55%; left: 8%;
+  width: 280px; height: 280px; background: rgba(0,0,0,0.08); border-radius: 50%;
+}
+.cta-banner-inner {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+}
+.cta-text h2 {
+  font-family: 'Syne', sans-serif !important;
+  font-size: clamp(1.7rem, 3vw, 2.5rem) !important; font-weight: 800 !important;
+  color: #fff !important; margin-bottom: 8px !important; letter-spacing: -0.02em !important;
+}
+.cta-text p {
+  font-family: 'DM Sans', sans-serif; font-size: 1rem;
+  color: rgba(255,255,255,0.82); line-height: 1.6; margin: 0;
+}
+.btn-cta-white {
+  background: #fff; color: var(--orange); font-family: 'Syne', sans-serif;
+  font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 15px 34px; border-radius: 9px; text-decoration: none; white-space: nowrap;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18); transition: all 0.3s ease; display: inline-block;
+}
+.btn-cta-white:hover {
+  transform: translateY(-2px); box-shadow: 0 14px 40px rgba(0,0,0,0.28);
+  color: var(--orange-dark); text-decoration: none;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.ibex-footer {
+  background: #060809; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 64px;
+}
+.footer-brand p {
+  font-family: 'DM Sans', sans-serif; font-size: 0.875rem; color: #525870;
+  line-height: 1.72; margin-top: 14px; max-width: 240px;
+}
+.footer-heading {
+  font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-primary);
+  margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--orange); display: inline-block;
+}
+.footer-links-list { list-style: none; padding: 0; margin: 0; }
+.footer-links-list li { padding: 7px 0; }
+.footer-links-list li a {
+  font-family: 'DM Sans', sans-serif; font-size: 0.875rem; color: #525870;
+  text-decoration: none; transition: all 0.25s ease; display: flex; align-items: center; gap: 8px;
+}
+.footer-links-list li a:hover { color: var(--orange); padding-left: 4px; }
+.footer-links-list li a i { color: var(--orange); font-size: 0.68rem; }
+.footer-contact-item {
+  display: flex; align-items: flex-start; gap: 13px;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.footer-contact-item:last-of-type { border-bottom: none; }
+.footer-contact-item .fc-icon {
+  width: 34px; height: 34px; background: rgba(245,92,21,0.1); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--orange); font-size: 0.85rem; flex-shrink: 0; margin-top: 2px;
+}
+.footer-contact-item .fc-info a,
+.footer-contact-item .fc-info span {
+  display: block; font-family: 'DM Sans', sans-serif; font-size: 0.875rem; color: #525870;
+  text-decoration: none; transition: color 0.25s; line-height: 1.5;
+}
+.footer-contact-item .fc-info a:hover { color: var(--orange); }
+.footer-map-frame {
+  border-radius: 11px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06); opacity: 0.82;
+  filter: grayscale(25%); margin-top: 14px;
+}
+.footer-bottom-bar {
+  margin-top: 52px; border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 22px 0; display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.footer-bottom-bar p { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: #383d52; margin: 0; }
+.footer-bottom-bar a { color: var(--orange); text-decoration: none; }
+
+/* Scroll to top */
+.scroll-to-top {
+  width: 42px !important; height: 42px !important; border-radius: 10px !important;
+  background: var(--orange) !important; display: flex !important;
+  align-items: center !important; justify-content: center !important;
+  color: #fff !important; font-size: 0.95rem !important;
+  box-shadow: 0 4px 20px rgba(245,92,21,0.38) !important; cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+.scroll-to-top:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 28px rgba(245,92,21,0.52) !important;
+}
+
+/* SEO links hidden */
+.seo-links { position: absolute; opacity: 0; pointer-events: none; }
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-inner { padding: 50px 0 60px; }
+  .hero-title { font-size: 2.4rem; }
+  .cta-banner { padding: 40px 28px; }
+  .cta-banner-inner { flex-direction: column; text-align: center; }
+  .hero-card-stack { padding: 20px 10px; }
+  .floating-badge { display: none; }
+  .section-services, .section-why, .section-portfolio, .section-cta { padding: 60px 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="main-header header-style-four">
+  <div class="main-box">
+    <div class="logo-box">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="ibex WebTech" title="ibex WebTech" width="170"></a>
+      </div>
+    </div>
+
+    <div class="nav-outer">
+      <nav class="nav main-menu">
+        <ul class="navigation">
+          <li class="current"><a href="index.html">Home</a></li>
+          <li class="dropdown"><a href="services.html">Services</a>
+            <ul>
+              <li><a href="website-design-development.html">Website Design &amp; Development</a></li>
+              <li><a href="website-maintenance.html">Website Maintenance</a></li>
+              <li><a href="logo-design.html">Logo Design</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="outer-box">
+      <a href="contact-us.html" class="theme-btn btn-style-one dark-bg"><span class="btn-title">Get a Free Quote</span></a>
+      <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="menu-backdrop"></div>
+    <nav class="menu-box">
+      <div class="upper-box">
+        <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="ibex WebTech" width="150"></a></div>
+        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+      </div>
+      <ul class="navigation clearfix"></ul>
+      <ul class="contact-list-one">
+        <li>
+          <div class="contact-info-box">
+            <i class="icon lnr-icon-phone-handset"></i>
+            <span class="title">Call Now</span>
+            <a href="tel:+4192684673">(419) 268-4673</a>
+          </div>
+        </li>
+        <li>
+          <div class="contact-info-box">
+            <span class="icon lnr-icon-envelope1"></span>
+            <span class="title">Send Email</span>
+            <a href="mailto:contactus@ibexwebtech.com">contactus@ibexwebtech.com</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- End Header -->
+
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6 col-md-12">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Ohio-Based Web Agency
+        </div>
+
+        <h1 class="hero-title">
+          We Build Websites<br>
+          That Work<br>
+          <span class="accent">For You</span>
+        </h1>
+
+        <p class="hero-desc">
+          We partner with Ohio businesses to create modern, high-performing websites that attract customers and drive measurable growth — from first design to long-term support.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="contact-us.html" class="btn-primary-hero">Get a Free Quote</a>
+          <a href="portfolio.html" class="btn-secondary-hero">
+            View Our Work
+            <span class="arrow"><i class="fa fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12">
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <span class="floating-badge top-right">
+              <i class="fa fa-star" style="color:var(--orange);"></i> Trusted in Ohio
+            </span>
+            <div class="hero-card">
+              <div class="hero-card-badge"><i class="fa fa-code"></i> What We Build</div>
+              <div class="hero-card-title">Complete Web Solutions</div>
+              <div class="service-pill-list">
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-desktop"></i></div>
+                  <div class="service-pill-text">Website Design &amp; Development</div>
+                </div>
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-wrench"></i></div>
+                  <div class="service-pill-text">Website Maintenance &amp; Support</div>
+                </div>
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-paint-brush"></i></div>
+                  <div class="service-pill-text">Logo Design &amp; Brand Identity</div>
+                </div>
+                <div class="service-pill">
+                  <div class="service-pill-icon"><i class="fa fa-search"></i></div>
+                  <div class="service-pill-text">SEO &amp; Google Promotion</div>
+                </div>
+              </div>
+            </div>
+            <span class="floating-badge bottom-left">
+              <i class="fa fa-map-marker" style="color:var(--orange);"></i>&nbsp; Coldwater, Ohio
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SERVICES ===== -->
+<section class="section-services">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-heading">Everything Your<br>Business Needs Online</h2>
+    <p class="section-subhead">Tailored digital solutions designed to strengthen your brand, engage your audience, and convert visitors into loyal customers.</p>
+
+    <div class="services-grid">
+
+      <a href="website-design-development.html" class="svc-card">
+        <div class="svc-card-image">
+          <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&q=80&auto=format&fit=crop" alt="Website Design & Development Ohio">
+        </div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon"><i class="fa fa-desktop"></i></div>
+          <div class="svc-card-title">Website Design &amp; Development</div>
+          <p class="svc-card-text">Custom-built, mobile-responsive websites engineered for speed, usability, and search engine visibility — so your business stands out online.</p>
+          <div class="svc-card-link">Learn More <i class="fa fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <a href="website-maintenance.html" class="svc-card">
+        <div class="svc-card-image">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80&auto=format&fit=crop" alt="Website Maintenance Ohio">
+        </div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon"><i class="fa fa-shield"></i></div>
+          <div class="svc-card-title">Website Maintenance</div>
+          <p class="svc-card-text">Keep your website secure, fast, and current with proactive maintenance — security patches, backups, performance tuning, and content updates.</p>
+          <div class="svc-card-link">Learn More <i class="fa fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <a href="logo-design.html" class="svc-card">
+        <div class="svc-card-image">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80&auto=format&fit=crop" alt="Logo Design Ohio">
+        </div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon"><i class="fa fa-paint-brush"></i></div>
+          <div class="svc-card-title">Logo Design</div>
+          <p class="svc-card-text">A great logo is the cornerstone of a strong brand. We design distinctive, versatile marks that make your business instantly recognizable.</p>
+          <div class="svc-card-link">Learn More <i class="fa fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="section-why">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-5 col-md-12">
+        <div class="why-image-wrap">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop" alt="Why Choose ibex WebTech Ohio">
+        </div>
+      </div>
+
+      <div class="col-lg-7 col-md-12">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-heading">Why Ohio Businesses<br>Choose ibex WebTech</h2>
+        <p style="font-family:'DM Sans',sans-serif; color:var(--text-muted); font-size:0.97rem; line-height:1.75; margin:16px 0 28px; max-width:460px;">
+          We don't just build websites — we build digital assets that generate real results. Every project is handled with care, expertise, and a commitment to your long-term success.
+        </p>
+
+        <ul class="why-checklist">
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Expertise &amp; Proven Experience</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Fully Custom Solutions</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Professional Design &amp; UX</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Modern Tech &amp; Best Practices</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Mobile-First Responsive Builds</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>SEO-Ready from Day One</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>On-Time, On-Budget Delivery</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Dedicated Client Support</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>Transparent, Fair Pricing</span></li>
+          <li class="why-item"><i class="fa fa-arrow-alt-circle-right"></i><span>1-Year Free Hosting Included</span></li>
+        </ul>
+
+        <a href="services.html" class="btn-primary-hero" style="margin-top:32px; display:inline-block;">
+          Explore Our Services
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PORTFOLIO PREVIEW ===== -->
+<section class="section-portfolio">
+  <div class="container">
+    <div class="section-label">Our Work</div>
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:14px;">
+      <h2 class="section-heading" style="margin-bottom:0;">Recent Projects</h2>
+      <a href="portfolio.html" class="btn-secondary-hero" style="margin-bottom:4px;">
+        View All Projects <span class="arrow"><i class="fa fa-arrow-right"></i></span>
+      </a>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card">
+        <a href="https://ftrecoveryvet.com/" target="_blank" rel="noopener" class="port-browser-wrap">
+          <div class="port-browser-bar">
+            <span class="port-dot r"></span><span class="port-dot y"></span><span class="port-dot g"></span>
+            <span class="port-url">ftrecoveryvet.com</span>
+          </div>
+          <div class="port-screenshot">
+            <img src="images/resource/portfolio-1.jpg" alt="Fort Recovery Veterinary Center website">
+            <div class="port-screenshot-overlay">
+              <span class="port-visit-label">Visit Site <i class="fa fa-external-link"></i></span>
+            </div>
+          </div>
+        </a>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-title">Fort Recovery Veterinary Center</div>
+          <a href="https://ftrecoveryvet.com/" target="_blank" rel="noopener" class="portfolio-card-link">
+            Visit <i class="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <a href="https://coldwateranimalclinic.com/" target="_blank" rel="noopener" class="port-browser-wrap">
+          <div class="port-browser-bar">
+            <span class="port-dot r"></span><span class="port-dot y"></span><span class="port-dot g"></span>
+            <span class="port-url">coldwateranimalclinic.com</span>
+          </div>
+          <div class="port-screenshot">
+            <img src="images/resource/portfolio-2.jpg" alt="Coldwater Animal Clinic website">
+            <div class="port-screenshot-overlay">
+              <span class="port-visit-label">Visit Site <i class="fa fa-external-link"></i></span>
+            </div>
+          </div>
+        </a>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-title">Coldwater Animal Clinic</div>
+          <a href="https://coldwateranimalclinic.com/" target="_blank" rel="noopener" class="portfolio-card-link">
+            Visit <i class="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <a href="https://stmarysveterinary.com/" target="_blank" rel="noopener" class="port-browser-wrap">
+          <div class="port-browser-bar">
+            <span class="port-dot r"></span><span class="port-dot y"></span><span class="port-dot g"></span>
+            <span class="port-url">stmarysveterinary.com</span>
+          </div>
+          <div class="port-screenshot">
+            <img src="images/resource/portfolio-3.jpg" alt="St. Marys Veterinary Clinic website">
+            <div class="port-screenshot-overlay">
+              <span class="port-visit-label">Visit Site <i class="fa fa-external-link"></i></span>
+            </div>
+          </div>
+        </a>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-title">St. Marys Veterinary Clinic</div>
+          <a href="https://stmarysveterinary.com/" target="_blank" rel="noopener" class="portfolio-card-link">
+            Visit <i class="fa fa-external-link"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== CTA BANNER ===== -->
+<section class="section-cta">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-banner-inner">
+        <div class="cta-text">
+          <h2>Ready to Grow Your Business Online?</h2>
+          <p>Let's build something great together — fast turnaround, honest pricing, real results.</p>
+        </div>
+        <a href="contact-us.html" class="btn-cta-white">Get a Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="ibex-footer">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+        <div class="footer-brand">
+          <a href="index.html"><img src="images/logo.png" alt="ibex WebTech" width="155"></a>
+          <p>Professional website design, development, and maintenance for businesses across Ohio and the United States.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links-list">
+          <li><a href="index.html"><i class="fa fa-angle-right"></i> Home</a></li>
+          <li><a href="services.html"><i class="fa fa-angle-right"></i> Services</a></li>
+          <li><a href="portfolio.html"><i class="fa fa-angle-right"></i> Portfolio</a></li>
+          <li><a href="contact-us.html"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+        <div class="footer-heading">Our Services</div>
+        <ul class="footer-links-list">
+          <li><a href="website-design-development.html"><i class="fa fa-angle-right"></i> Website Design &amp; Development</a></li>
+          <li><a href="website-maintenance.html"><i class="fa fa-angle-right"></i> Website Maintenance</a></li>
+          <li><a href="logo-design.html"><i class="fa fa-angle-right"></i> Logo Design</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="footer-heading">Contact Details</div>
+        <div class="footer-contact-item">
+          <div class="fc-icon"><i class="fa fa-phone"></i></div>
+          <div class="fc-info"><a href="tel:+4192684673">(419) 268-4673</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="fc-icon"><i class="fa fa-envelope"></i></div>
+          <div class="fc-info"><a href="mailto:contactus@ibexwebtech.com">contactus@ibexwebtech.com</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="fc-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="fc-info"><span>Coldwater, Ohio 45828</span></div>
+        </div>
+        <div class="footer-map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775096.1695630684!2d-85.17584720613948!3d40.6360694841141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x814e1af0a204619b%3A0x990c71c1da17a5e1!2sibex%20webtech!5e0!3m2!1sen!2sin!4v1690309313851!5m2!1sen!2sin" width="100%" height="135" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <p>© <span id="yr"></span> <a href="index.html">ibex WebTech</a>. All rights reserved.</p>
+    </div>
+  </div>
+
+  <div class="seo-links">
+    <a href="ohio/index.html">Ohio</a> | <a href="lima/index.html">Lima</a> | <a href="muncie/index.html">Muncie</a> | <a href="troy/index.html">Troy</a> | <a href="vanwert/index.html">Vanwert</a> | <a href="greenville/index.html">Greenville</a> | <a href="celina/index.html">Celina</a> | <a href="usa/index.html">USA</a>
+  </div>
+</footer>
+
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
