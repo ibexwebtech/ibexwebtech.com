@@ -3,8 +3,7 @@
   "name": "ibexwebtech",
   "compatibility_date": "2026-04-29",
   "assets": {
-    "directory": ".",
-    "exclude": [".git", "node_modules"] 
+    "directory": "."
   },
   "observability": {
     "enabled": true
